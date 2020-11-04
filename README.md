@@ -5461,6 +5461,38 @@ Massively Parallel Systems</a></li>
 Towards an Unsupervised Spatiotemporal Representation of Cilia Video Using A Modular Generative Pipeline</a></li>                              
 <li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(325).pdf" style="text-decoration:none;">Simulating X-ray Observations with Python</a></li>
 <li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(326).pdf" style="text-decoration:none;">Time Series Analysis in Python with statsmodels</a></li>
+
+ <li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(327).pdf" style="text-decoration:none;">5 Best Python Libraries for Machine Learning </a></li>
+
+ <li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(328).pdf" style="text-decoration:none;">Big Data and Sentiment Analysis Using Python</a></li>
+
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(329).pdf" style="text-decoration:none;">Chatbot for Medical Treatment using NLTK Lib</a></li>
+ <li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(330).pdf" style="text-decoration:none;">
+Importance of Learning Python Programming in the Field of Mechanical Engineering</a></li>                              
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(331).pdf" style="text-decoration:none;">Introduction To Text Analysis
+with Python And The Natural Language Toolkit</a></li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(332).pdf" style="text-decoration:none;">Learning Pandas: Python Tools for Data Munging, Data Analysis, and Visualization</a></li>
+
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(333).pdf" style="text-decoration:none;">Linear Regression Python</a></li>
+ <li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(334).pdf" style="text-decoration:none;">
+OpenCV-Python Tutorials Documentation</a></li>                              
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(335).pdf" style="text-decoration:none;">Python Algorithms</a></li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(336).pdf" style="text-decoration:none;">Python Machine Learning</a></li>
+
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(337).pdf" style="text-decoration:none;">Python programming | exercises</a></li>
+ <li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(338).pdf" style="text-decoration:none;">
+Python's Fake Increment and Decrement Operators</a></li>                              
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(339).pdf" style="text-decoration:none;">Time Series Data Price Variation ShiftingGroupBy</a></li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/py(340).pdf" style="text-decoration:none;">Development of a computational software in Python, used to study the materials resistance in beams</a></li>
+
+
+
+
+
+
+
+
+
 </ul>
 
 
