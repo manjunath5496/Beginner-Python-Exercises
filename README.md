@@ -4711,7 +4711,7 @@ print("The ASCII value of '" + c + "' is", ord(c))
 </br>
 
 <ul>
- <li<a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/tree/main/Scripts/" style="text-decoration:none;">1000+ Python Practice Scripts</a></li>
+ <li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/tree/main/Scripts/" style="text-decoration:none;">1000+ Python Practice Scripts</a></li>
 </ul>
 
 </br>
