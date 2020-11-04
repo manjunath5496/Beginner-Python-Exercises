@@ -4694,17 +4694,103 @@ jpeg_res("img1.jpg")
 
 ### **Question:**
 
-> ***Write a program to find the ASCII value of a character.***
+> ***Write a program to read website source code.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
+import sys
 
-c = 'p'
-print("The ASCII value of '" + c + "' is", ord(c))
- 
+if sys.version_info[0] == 3:
+    from urllib.request import urlopen
+else:
+    # Not Python 3 - today, it is most likely to be Python 2
+    # But note that this might need an update when Python 4
+    # might be around one day
+    from urllib import urlopen
+
+
+# Your code where you can use urlopen
+with urlopen("http://www.myw3schools.com") as url:
+    s = url.read()
+
+print(s)
+```
+----------------------------------------
+
+
+# Question 181
+
+### **Question:**
+
+> ***Write a program to get IP address of your computer.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+import socket    
+hostname = socket.gethostname()    
+IPAddr = socket.gethostbyname(hostname)    
+print("Your Computer Name is:" + hostname)    
+print("Your Computer IP Address is:" + IPAddr) 
+```
+----------------------------------------
+
+# Question 182
+
+### **Question:**
+
+> ***Write a program to get all links from a webpage.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+from bs4 import BeautifulSoup
+from urllib.request import Request, urlopen
+
+req = Request("http://www.myw3schools.com")
+html_page = urlopen(req)
+
+soup = BeautifulSoup(html_page, "lxml")
+
+links = []
+for link in soup.findAll('a'):
+    links.append(link.get('href'))
+
+print(links)
+```
+----------------------------------------
+
+# Question 183
+
+### **Question:**
+
+> ***Write a program to illustrate Dice Roll Simulator.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+import random
+min = 1
+max = 6
+
+roll_again = "yes"
+
+while roll_again == "yes" or roll_again == "y":
+    print ("Rolling the dices...")
+    print ("The values are....")
+    print (random.randint(min, max))
+    print (random.randint(min, max))
+
+    roll_again = input("Roll the dices again?")
 ```
 ----------------------------------------
 
