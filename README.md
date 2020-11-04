@@ -4710,6 +4710,12 @@ print("The ASCII value of '" + c + "' is", ord(c))
 
 </br>
 
+<ul>
+ <li><b><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/yth(1).pdf" style="text-decoration:none;">1000+ Python Practice Scripts</a></b></li>
+</ul>
+
+</br>
+
 <p> <strong> Books: </strong> </p>
 
 <ul>
