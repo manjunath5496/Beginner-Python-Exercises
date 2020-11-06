@@ -5538,3 +5538,33 @@ Python's Fake Increment and Decrement Operators</a></li>
 
 
 </ul>
+
+
+<ul>
+	
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/Air Hockey Game.rar" style="text-decoration:none;">Air Hockey Game</a</li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/Automated Teller Machine System.rar" style="text-decoration:none;">Automated Teller Machine System </a></li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/2048 Game.rar" style="text-decoration:none;">2048 Game</a</li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/Grocery Billing System.rar" style="text-decoration:none;">Grocery Billing System </a></li>
+
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/Hang Man Game.rar" style="text-decoration:none;">Hang Man Game</a</li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/Hotel Management System.rar" style="text-decoration:none;">Hotel Management System </a></li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/Ludo Game.rar" style="text-decoration:none;">Ludo Game</a</li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/School Library System.rar" style="text-decoration:none;">School Library System </a></li>
+
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/Snake Game.rar" style="text-decoration:none;">Snake Game</a</li>
+<li><a target="_blank" href="https://github.com/manjunath5496/Beginner-Python-Exercises/blob/master/User Card Management  System.rar" style="text-decoration:none;">User Card Management  System </a></li>
+
+
+
+
+
+
+
+</ul>
+
+
+
+
+
+
