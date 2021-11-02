@@ -4794,6 +4794,193 @@ while roll_again == "yes" or roll_again == "y":
 ```
 ----------------------------------------
 
+
+# Question 184
+
+### **Question:**
+
+> ***Write a program to convert the temperature in degree centigrade to Fahrenheit.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+c = input(" Enter temperature in Centigrade: ")
+f = (9*(int(c))/5)+32
+print(" Temperature in Fahrenheit is: ", f)
+```
+----------------------------------------
+
+# Question 185
+
+### **Question:**
+
+> ***Write a program to check whether the given integer is a multiple of 5.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+number = int(input("Enter an integer: "))
+if(number%5==0):
+    print(number, "is a multile of 5")
+else:
+    print(number, "is not a multiple of 5")
+```
+----------------------------------------
+
+# Question 186
+
+### **Question:**
+
+> ***Write a program to check whether the given integer is a multiple of both 3 and 5.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+number = int(input("Enter an integer: "))
+if((number%3==0)and(number%5==0)):
+    print(number, "is a multiple of both 3 and 5")
+else:
+    print(number, "is not a multiple of both 3 and 5")
+```
+----------------------------------------
+
+
+# Question 187
+
+### **Question:**
+
+> ***Write a program to display all the multiples of 5 within the range 10 to 70.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+for i in range(10,70):
+    if (i%5==0):
+        print(i)
+```
+----------------------------------------
+
+
+# Question 188
+
+### **Question:**
+
+> ***Write a program to display all integers within the range 50-100 whose sum of digits is an even number.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+for i in range(50,100):
+    num = i
+    sum = 0
+    while(num!=0):
+        digit = num%10
+        sum = sum + digit
+        num = num//10
+    if(sum%2==0):
+        print(i)
+```
+----------------------------------------
+
+
+# Question 189
+
+### **Question:**
+
+> ***Write a program to print the numbers from a given number n till 0 using recursion.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+def print_till_zero(n):
+    if (n==0):
+        return
+    print(n)
+    n=n-1
+    print_till_zero(n)
+print_till_zero(9)
+```
+----------------------------------------
+
+# Question 190
+
+### **Question:**
+
+> ***Write a program to find the odd numbers in an array.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+num = [8,3,1,6,2,4,5,9]
+count = 0
+for i in range(len(num)):
+    if(num[i]%2!=0):
+        count = count+1
+print("The number of odd numbers in the array are: ", count)
+```
+----------------------------------------
+
+# Question 191
+
+### **Question:**
+
+> ***Write a program to design a calculator.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+def add(x,y):
+    print(x, "+",y,"=", x+y)
+def subtract(x,y):
+    print(x, "-",y,"=", x-y)
+def multiply(x,y):
+    print(x, "*",y,"=", x*y)
+def divide(x,y):
+    print(x, "/",y,"=", x/y)
+print("Enter a number:")
+n1=input()
+print("Enter a number:")
+n2=input()
+print("Enter the operation +,-,*,/ ") 
+op=input() 
+if op=='+':
+    add(int(n1),int(n2))
+elif op=='-':
+    subtract(int(n1),int(n2))
+elif op=='*':
+    multiply(int(n1),int(n2))
+elif op=='/':
+    divide(int(n1),int(n2))
+else:
+    print("Invalid entry.")
+```
+----------------------------------------
+
+
+
+
+
+
+
+
+
+
 </br>
 
 <ul>
