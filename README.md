@@ -5311,6 +5311,107 @@ print("String in Lowercase =  ", string)
 ----------------------------------------
  
 
+# Question 207
+
+### **Question:**
+
+> ***Write a program to Convert Decimal to Binary, octal, and Hexadecimal.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+
+decimal = int(input("Enter a Decimal Number: "))
+
+binary = bin(decimal)
+octal = oct(decimal)
+hexadecimal = hex(decimal)
+
+print(decimal, " Decimal Value = ", binary, "Binary Value")
+print(decimal, " Decimal Value = ", octal, "Octal Value")
+print(decimal, " Decimal Value = ", hexadecimal, "Hexadecimal Value")
+```
+----------------------------------------
+
+# Question 208
+
+### **Question:**
+
+> ***Write a program to check a Triangle is Valid or Not.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+a = int(input('Please Enter the First Angle of a Triangle: '))
+b = int(input('Please Enter the Second Angle of a Triangle: '))
+c = int(input('Please Enter the Third Angle of a Triangle: '))
+
+
+total = a + b + c
+
+if total == 180:
+    print("\nThis is a Valid Triangle")
+else:
+    print("\nThis is an Invalid Triangle")
+```
+----------------------------------------
+
+# Question 209
+
+### **Question:**
+
+> ***Write a program that inputs an age and print age after 20 years .***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+age = int(input("What is your age? "))
+print("In twenty years, you will be", age + 20, "years old!")
+```
+----------------------------------------
+
+# Question 210
+
+### **Question:**
+
+> ***Write a program to print the Number of seconds in Year.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+days=365
+hours=24
+minutes=60
+seconds=60
+print("Number of seconds in a year : ",days*hours*minutes*seconds)
+```
+----------------------------------------
+
+# Question 211
+
+### **Question:**
+
+> ***Write a program that inputs a string and then prints it equal to number of times its length.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+str = input("Enter string: ")
+b = len(str)
+a = str * b
+print(a)
+```
+----------------------------------------
 
 
 
