@@ -4946,13 +4946,13 @@ print("The number of odd numbers in the array are: ", count)
 
 ```python
 def add(x,y):
-    print(x, "+",y,"=", x+y)
+    print(x,"+",y,"=", x+y)
 def subtract(x,y):
-    print(x, "-",y,"=", x-y)
+    print(x,"-",y,"=", x-y)
 def multiply(x,y):
-    print(x, "*",y,"=", x*y)
+    print(x,"*",y,"=", x*y)
 def divide(x,y):
-    print(x, "/",y,"=", x/y)
+    print(x,"/",y,"=", x/y)
 print("Enter a number:")
 n1=input()
 print("Enter a number:")
@@ -4972,7 +4972,53 @@ else:
 ```
 ----------------------------------------
 
+# Question 192
 
+### **Question:**
+
+> ***Write a program to find the Maximum of two numbers.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+def maximum(a, b):
+     
+    if a >= b:
+        return a
+    else:
+        return b
+     
+a = 3
+b = 5
+print(maximum(a, b))
+```
+----------------------------------------
+
+# Question 193
+
+### **Question:**
+
+> ***Write a program to find the Minimum of two numbers.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+def minimum(a, b):
+      
+    if a <= b:
+        return a
+    else:
+        return b
+      
+a = 3
+b = 9
+print(minimum(a, b))
+```
+----------------------------------------
 
 
 
