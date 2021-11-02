@@ -5021,7 +5021,295 @@ print(minimum(a, b))
 ----------------------------------------
 
 
+# Question 194
 
+### **Question:**
+
+> ***Write a program to Calculate Profit or Loss.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+cp=float(input("Enter the Cost Price : "));
+sp=float(input("Enter the Selling Price : "));
+if cp==sp:
+    print("No Profit or No Loss")
+else:
+    if sp>cp:
+        print("Profit of ",sp-cp)
+    else:
+        print("Loss of ",cp-sp)
+```
+----------------------------------------
+
+# Question 195
+
+### **Question:**
+
+> ***Write a program to find Student Grade.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+physics = float(input(" Please enter Physics Marks: "))
+math = float(input(" Please enter Math score: "))
+chemistry = float(input(" Please enter Chemistry Marks: "))
+
+total = physics + math + chemistry
+percentage = (total / 300) * 100
+
+print("Total Marks = %.2f"  %total)
+print("Percentage = %.2f"  %percentage)
+
+if(percentage >= 90):
+    print("A Grade")
+elif(percentage >= 80):
+    print("B Grade")
+elif(percentage >= 70):
+    print("C Grade")
+elif(percentage >= 60):
+    print("D Grade")
+elif(percentage >= 40):
+    print("E Grade")
+else:
+    print("Fail")
+```
+----------------------------------------
+
+# Question 196
+
+### **Question:**
+
+> ***Write a program to Print Even Numbers from 1 to N.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+max = int(input(" Enter the Value of N : "))
+
+for num in range(1, max+1):
+    if(num % 2 == 0):
+        print("{0}".format(num))
+```
+----------------------------------------
+
+# Question 197
+
+### **Question:**
+
+> ***Write a program to Print Odd Numbers from 1 to N.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+max = int(input(" Enter the Value of N : "))
+
+for num in range(1, max+1):
+    if(num % 2 != 0):
+        print("{0}".format(num))
+```
+----------------------------------------
+
+# Question 198
+
+### **Question:**
+
+> ***Write a program to Compute Sum of Even Numbers from 1 to N.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+max = int(input(" Enter the Value of N : "))
+total = 0
+
+for num in range(1, max+1):
+    if(num % 2 == 0):
+        print("{0}".format(num))
+        total = total + num
+
+print("The Sum of Even Numbers from 1 to {0} = {1}".format(num, total))
+```
+----------------------------------------
+
+
+# Question 199
+
+### **Question:**
+
+> ***Write a program to Compute Sum of Odd Numbers from 1 to N.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+max = int(input(" Enter the Value of N : "))
+total = 0
+
+for num in range(1, max+1):
+    if(num % 2 != 0):
+        print("{0}".format(num))
+        total = total + num
+
+print("The Sum of Odd Numbers from 1 to {0} = {1}".format(num, total))
+```
+----------------------------------------
+
+
+# Question 200
+
+### **Question:**
+
+> ***Write a program to check whether a character is Alphabet or not.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+ch = input("Enter a Character : ")
+
+if((ch >= 'a' and ch <= 'z') or (ch >= 'A' and ch <= 'Z')):
+    print(ch, "is an Alphabet.")
+else:
+    print(ch, "is Not an Alphabet.")
+```
+----------------------------------------
+
+# Question 201
+
+### **Question:**
+
+> ***Write a program to check whether a character is Alphabet or Digit or Special Character.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+ch = input("Enter a Character : ")
+
+if((ch >= 'a' and ch <= 'z') or (ch >= 'A' and ch <= 'Z')): 
+    print(ch, "is an Alphabet.") 
+elif(ch >= '0' and ch <= '9'):
+    print(ch, "is a Digit.")
+else:
+    print(ch, "is a Special Character.")
+```
+----------------------------------------
+
+# Question 202
+
+### **Question:**
+
+> ***Write a program to check whether a character is Lowercase or not.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+ch = input("Enter a Character : ")
+
+if(ch.islower()):
+    print(ch, "is a Lowercase character")
+else:
+    print(ch, "is Not a Lowercase character")
+```
+----------------------------------------
+
+
+# Question 203
+
+### **Question:**
+
+> ***Write a program to check whether a character is Uppercase or not.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+ch = input("Enter a Character : ")
+
+if(ch.isupper()):
+    print(ch, "is a Uppercase character")
+else:
+    print(ch, "is Not a Uppercase character")
+```
+----------------------------------------
+
+# Question 204
+
+### **Question:**
+
+> ***Write a program to check whether a character is Vowel or Consonant.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+ch = input("Enter a Character : ")
+
+if(ch == 'a' or ch == 'e' or ch == 'i' or ch == 'o' or ch == 'u' or ch == 'A'
+       or ch == 'E' or ch == 'I' or ch == 'O' or ch == 'U'):
+    print(ch, "is a Vowel")
+else:
+    print(ch, "is a Consonant")
+```
+----------------------------------------
+
+# Question 205
+
+### **Question:**
+
+> ***Write a program to Convert String to Uppercase.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+str = input("Enter a String : ")
+
+string = str.upper()
+ 
+print("\nString in Lowercase  =  ", str)
+print("String in Uppercase =  ", string)
+```
+----------------------------------------
+
+# Question 206
+
+### **Question:**
+
+> ***Write a program to Convert String to Lowercase.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+str = input("Enter a String : ")
+
+string = str.lower()
+
+print("\nString in Uppercase  =  ", str)
+print("String in Lowercase =  ", string)
+```
+----------------------------------------
+ 
 
 
 
