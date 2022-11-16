@@ -2,7 +2,7 @@
 
 ### **Question:**
 
-> ***Write a program to Add Two Numbers.***
+> ***Write a program to add two numbers.***
 
 ---------------------------------------
 
