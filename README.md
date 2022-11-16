@@ -4088,97 +4088,22 @@ print()
 
 ### **Question:**
 
-> ***Write a program to implement a binary heap.***
+> ***Write a program that calculate the difference between a given number and 10, returning double the absolute difference if the value is higher than 10.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-class BinaryHeap:
-    def __init__(self):
-        self.items = []
- 
-    def size(self):
-        return len(self.items)
- 
-    def parent(self, i):
-        return (i - 1)//2
- 
-    def left(self, i):
-        return 2*i + 1
- 
-    def right(self, i):
-        return 2*i + 2
- 
-    def get(self, i):
-        return self.items[i]
- 
-    def get_max(self):
-        if self.size() == 0:
-            return None
-        return self.items[0]
- 
-    def extract_max(self):
-        if self.size() == 0:
-            return None
-        largest = self.get_max()
-        self.items[0] = self.items[-1]
-        del self.items[-1]
-        self.max_heapify(0)
-        return largest
- 
-    def max_heapify(self, i):
-        l = self.left(i)
-        r = self.right(i)
-        if (l <= self.size() - 1 and self.get(l) > self.get(i)):
-            largest = l
-        else:
-            largest = i
-        if (r <= self.size() - 1 and self.get(r) > self.get(largest)):
-            largest = r
-        if (largest != i):
-            self.swap(largest, i)
-            self.max_heapify(largest)
- 
-    def swap(self, i, j):
-        self.items[i], self.items[j] = self.items[j], self.items[i]
- 
-    def insert(self, key):
-        index = self.size()
-        self.items.append(key)
- 
-        while (index != 0):
-            p = self.parent(index)
-            if self.get(p) < self.get(index):
-                self.swap(p, index)
-            index = p
- 
- 
-bheap = BinaryHeap()
- 
-print('Menu')
-print('insert <data>')
-print('max get')
-print('max extract')
-print('quit')
- 
-while True:
-    do = input('What would you like to do? ').split()
- 
-    operation = do[0].strip().lower()
-    if operation == 'insert':
-        data = int(do[1])
-        bheap.insert(data)
-    elif operation == 'max':
-        suboperation = do[1].strip().lower()
-        if suboperation == 'get':
-            print('Maximum value: {}'.format(bheap.get_max()))
-        elif suboperation == 'extract':
-            print('Maximum value removed: {}'.format(bheap.extract_max()))
- 
-    elif operation == 'quit':
-        break
+
+def myfunc(x):
+    if x <= 10:
+        return 10 - x
+    else:
+        return (x - 10) * 2 
+
+print(myfunc(8))
+print(myfunc(16))
  
 ```
 ----------------------------------------
@@ -4187,57 +4112,25 @@ while True:
 
 ### **Question:**
 
-> ***Write a program to implement a binomial tree.***
+> ***Write a program that add three given numbers, returning three times their sum if the values are equivalent.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-class BinomialTree:
-    def __init__(self, key):
-        self.key = key
-        self.children = []
-        self.order = 0
- 
-    def add_at_end(self, t):
-        self.children.append(t)
-        self.order = self.order + 1
- 
- 
-trees = []
- 
-print('Menu')
-print('create <key>')
-print('combine <index1> <index2>')
-print('quit')
- 
-while True:
-    do = input('What would you like to do? ').split()
- 
-    operation = do[0].strip().lower()
-    if operation == 'create':
-        key = int(do[1])
-        btree = BinomialTree(key)
-        trees.append(btree)
-        print('Binomial tree created.')
-    elif operation == 'combine':
-        index1 = int(do[1])
-        index2 = int(do[2])
-        if trees[index1].order == trees[index2].order:
-            trees[index1].add_at_end(trees[index2])
-            del trees[index2]
-            print('Binomial trees combined.')
-        else:
-            print('Orders of the trees need to be the same.')
- 
-    elif operation == 'quit':
-        break
- 
-    print('{:>8}{:>12}{:>8}'.format('Index', 'Root key', 'Order'))
-    for index, t in enumerate(trees):
-        print('{:8d}{:12d}{:8d}'.format(index, t.key, t.order))
- 
+
+def myfunc(a, b, c):
+
+     sum = a + b + c
+  
+     if a == b == c:
+      sum = sum * 3
+     return sum
+
+print(myfunc(11, 12, 13))
+print(myfunc(13, 13, 13))
+
 ```
 ----------------------------------------
 
