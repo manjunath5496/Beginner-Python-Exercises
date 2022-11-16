@@ -4996,6 +4996,26 @@ print(maximum(a, b))
 ```
 ----------------------------------------
 
+<strong>Solution: </strong>
+
+```python
+a = 3
+b = 5
+ 
+print(max(a, b))
+```
+----------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+a = 3
+b = 5
+ 
+print(a if a >= b else b)
+```
+----------------------------------------
+
 # Question 193
 
 ### **Question:**
