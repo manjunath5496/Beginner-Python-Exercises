@@ -1794,7 +1794,7 @@ else:
 
 ### **Question:**
 
-> ***Write a program to solve the maximum subarray problem using divide and conquer technique.***
+> ***Write a program to display the current date and time.***
 
 ---------------------------------------
 
@@ -1802,55 +1802,9 @@ else:
 
 ```python
 
-def find_max_subarray(alist, start, end):
-    """Returns (l, r, m) such that alist[l:r] is the maximum subarray in
-    A[start:end] with sum m. Here A[start:end] means all A[x] for start <= x <
-    end."""
-    # base case
-    if start == end - 1:
-        return start, end, alist[start]
-    else:
-        mid = (start + end)//2
-        left_start, left_end, left_max = find_max_subarray(alist, start, mid)
-        right_start, right_end, right_max = find_max_subarray(alist, mid, end)
-        cross_start, cross_end, cross_max = find_max_crossing_subarray(alist, start, mid, end)
-        if (left_max > right_max and left_max > cross_max):
-            return left_start, left_end, left_max
-        elif (right_max > left_max and right_max > cross_max):
-            return right_start, right_end, right_max
-        else:
-            return cross_start, cross_end, cross_max
+import datetime
  
-def find_max_crossing_subarray(alist, start, mid, end):
-    """Returns (l, r, m) such that alist[l:r] is the maximum subarray within
-    alist with start <= l < mid <= r < end with sum m. The arguments start, mid,
-    end must satisfy start <= mid <= end."""
-    sum_left = float('-inf')
-    sum_temp = 0
-    cross_start = mid
-    for i in range(mid - 1, start - 1, -1):
-        sum_temp = sum_temp + alist[i]
-        if sum_temp > sum_left:
-            sum_left = sum_temp
-            cross_start = i
- 
-    sum_right = float('-inf')
-    sum_temp = 0
-    cross_end = mid + 1
-    for i in range(mid, end):
-        sum_temp = sum_temp + alist[i]
-        if sum_temp > sum_right:
-            sum_right = sum_temp
-            cross_end = i + 1
-    return cross_start, cross_end, sum_left + sum_right
- 
-alist = input('Enter the list of numbers: ')
-alist = alist.split()
-alist = [int(x) for x in alist]
-start, end, maximum = find_max_subarray(alist, 0, len(alist))
-print('The maximum subarray starts at index {}, ends at index {}'
-      ' and has sum {}.'.format(start, end - 1, maximum))
-
+print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
  
 ```
 ----------------------------------------
@@ -1859,7 +1813,7 @@ print('The maximum subarray starts at index {}, ends at index {}'
 
 ### **Question:**
 
-> ***Write a program to solve the maximum subarray problem using Kadane's algorithm.***
+> ***Write a program to calculate the volume of a sphere with a radius of 8.***
 
 ---------------------------------------
 
@@ -1867,35 +1821,11 @@ print('The maximum subarray starts at index {}, ends at index {}'
 
 ```python
 
-def find_max_subarray(alist, start, end):
-    """Returns (l, r, m) such that alist[l:r] is the maximum subarray in
-    A[start:end] with sum m. Here A[start:end] means all A[x] for start <= x <
-    end."""
-    max_ending_at_i = max_seen_so_far = alist[start]
-    max_left_at_i = max_left_so_far = start
-    # max_right_at_i is always i + 1
-    max_right_so_far = start + 1
-    for i in range(start + 1, end):
-        if max_ending_at_i > 0:
-            max_ending_at_i += alist[i]
-        else:
-            max_ending_at_i = alist[i]
-            max_left_at_i = i
-        if max_ending_at_i > max_seen_so_far:
-            max_seen_so_far = max_ending_at_i
-            max_left_so_far = max_left_at_i
-            max_right_so_far = i + 1
-    return max_left_so_far, max_right_so_far, max_seen_so_far
- 
- 
-alist = input('Enter the list of numbers: ')
-alist = alist.split()
-alist = [int(x) for x in alist]
-start, end, maximum = find_max_subarray(alist, 0, len(alist))
-print('The maximum subarray starts at index {}, ends at index {}'
-      ' and has sum {}.'.format(start, end - 1, maximum))
+pi=22/7
+r = 8.0
+V = 4.0/3.0*pi*r**3
+print('The volume of the sphere is: ',V)
 
- 
 ```
 ----------------------------------------
 
