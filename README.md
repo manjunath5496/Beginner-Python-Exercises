@@ -758,7 +758,7 @@ print(radian)
 
 ### **Question:**
 
-> ***Write a program to Generate a Random Number.***
+> ***Write a program to generate a random number.***
 
 ---------------------------------------
 
@@ -775,17 +775,17 @@ print(random.randint(0,9))
 
 ### **Question:**
 
-> ***Write a Program to find the semi-perimeter of triangle.***
+> ***Write a program to find the semi-perimeter of triangle.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-a = int(input('Enter first side: '))
-b = int(input('Enter second side: '))
-c = int(input('Enter third side: '))
-s = (a + b + c) / 2
+x = int(input('Enter first side: '))
+y = int(input('Enter second side: '))
+z = int(input('Enter third side: '))
+s = (x + y + z) / 2
 print(s)
 ```
 ----------------------------------------
@@ -795,15 +795,15 @@ print(s)
 
 ### **Question:**
 
-> ***Given a list of numbers, Iterate it and print only those numbers which are divisible of 2.***
+> ***Given a list of numbers, iterate it and print only those numbers which are divisible of 2.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-List = [10, 20, 33, 46, 55]
-for i in List:
+x = [10, 20, 33, 46, 55]
+for i in x:
     if (i % 2 == 0):
       print(i)
 ```
@@ -813,7 +813,7 @@ for i in List:
 
 ### **Question:**
 
-> ***Write a program to Multiply all numbers in the list.***
+> ***Write a program to multiply all numbers in the list.***
 
 ---------------------------------------
 
@@ -821,9 +821,9 @@ for i in List:
 
 ```python
 import numpy  
-list = [1, 2, 3]  
-result = numpy.prod(list) 
-print(result) 
+x = [1, 2, 3]  
+y = numpy.prod(x) 
+print(y) 
 ```
 ----------------------------------------
 
@@ -838,8 +838,8 @@ print(result)
 <strong>Solution: </strong>
 
 ```python
-a = 'j'
-print("The ASCII value of '" + a + "' is", ord(a))  
+x = 'j'
+print("The ASCII value of '" + x + "' is", ord(x))  
 ```
 ----------------------------------------
 
@@ -875,7 +875,7 @@ for file in files:
 
 ### **Question:**
 
-> ***Write a program to Read and Write File.***
+> ***Write a program to read and write file.***
 
 ---------------------------------------
 
@@ -992,8 +992,8 @@ print(message)
 # Try block
 try:
     # Take a number
-    number = int(input("Enter a number: "))
-    if number % 2 == 0:
+    x = int(input("Enter a number: "))
+    if x % 2 == 0:
         print("Number is even")
     else:
         print("Number is odd")
@@ -1024,7 +1024,7 @@ import getpass
 passwd = getpass.getpass('Password:')
 
 # Check the password
-if passwd == "python":
+if passwd == "albert":
     print("You are authenticated")
 else:
     print("You are not authenticated")
