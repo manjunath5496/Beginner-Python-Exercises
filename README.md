@@ -17,8 +17,8 @@ print(c)
 ----------------------------------------
 
 ```python
-a = int(input("enter a number: "))
-b = int(input("enter a number: "))
+a = int(input("Enter a number: "))
+b = int(input("Enter a number: "))
 c= a+b
 print(c)
 ```
@@ -35,7 +35,7 @@ print(c)
 <strong>Solution: </strong>
 
 ```python
-a = int(input("enter a number: "))
+a = int(input("Enter a number: "))
 if a % 2 == 0:
     print("This is an even number.")
 else:
@@ -253,10 +253,10 @@ print(y)
 <strong>Solution: </strong>
 
 ```python
-a=input("Please enter a word: ")
-c = a.casefold()
-b = reversed(c)
-if list(c) == list(b):
+x=input("Please enter a word: ")
+z = x.casefold()
+y = reversed(z)
+if list(z) == list(y):
    print("It is palindrome")
 else:
    print("It is not palindrome")
@@ -267,17 +267,16 @@ else:
 
 ### **Question:**
 
-> ***Take two lists, say for example these two: a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] and write a program that returns a list that contains only the elements that are common between the lists (without duplicates). Make sure your program works on two lists of different sizes.***
+> ***Take two lists, say for example these two: x = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] y = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] and write a program that returns a list that contains only the elements that are common between the lists (without duplicates). Make sure your program works on two lists of different sizes.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-result = [i for i in set(a) if i in b]
-print(result)
+x = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+y = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+print([i for i in set(x) if i in y])
 ```
 ----------------------------------------
 
@@ -293,10 +292,10 @@ print(result)
 
 ```python
 file = open("testfile.txt","w") 
-file.write("Hello World") 
-file.write("This is our new text file") 
-file.write("and this is another line.") 
-file.write("Why? Because we can.") 
+file.write("Albert Einstein") 
+file.write("Elsa Einstein") 
+file.write("David Einstein.") 
+file.write("Why E=mc squared?.") 
 file.close()
 ```
 ----------------------------------------
@@ -313,9 +312,9 @@ file.close()
 
 ```python
 with open('testfile.txt') as f:
-  	line = f.readline()
-  	while line:
-  		print(line)
+  	i = f.readline()
+  	while i:
+  		print(i)
   		line = f.readline()
 ```
 ----------------------------------------
@@ -324,17 +323,16 @@ with open('testfile.txt') as f:
 
 ### **Question:**
 
-> ***Take two sets, say for example these two: a = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89} b = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13} and write a program that returns a set that contains only the elements that are common between the sets.***
+> ***Take two sets, say for example these two: x = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89} y = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13} and write a program that returns a set that contains only the elements that are common between the sets.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-a = {1, 1, 2, 2, 3, 5, 8, 13, 21, 34, 55, 89}
-b = {1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
-c = set(a) & set(b)  
-print(c)
+x = {1, 1, 2, 2, 3, 5, 8, 13, 21, 34, 55, 89}
+y = {1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
+print(set(x) & set(y))
 ```
 ----------------------------------------
 
@@ -349,9 +347,9 @@ print(c)
 <strong>Solution: </strong>
 
 ```python
-s = "mystring"
-l = list(s)
-print (l)
+x= "albert"
+y = list(x)
+print(y)
 ```
 ----------------------------------------
 
@@ -366,10 +364,10 @@ print (l)
 <strong>Solution: </strong>
 
 ```python
-n=int(input("Enter an integer: "))
+x=int(input("Enter an integer: "))
 print("The divisors of the number are: ")
-for i in range(1,n+1):
-    if(n%i==0):
+for i in range(1,x+1):
+    if(x%i==0):
         print(i)
 ```
 ----------------------------------------
@@ -385,15 +383,15 @@ for i in range(1,n+1):
 <strong>Solution: </strong>
 
 ```python
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-c = int(input("Enter third number: "))
-if (a > b) and (a > c):
-   largest = a
-elif (b > a) and (b > c):
-   largest = b
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+z = int(input("Enter third number: "))
+if (x > y) and (x > z):
+   largest = x
+elif (y > x) and (y > z):
+   largest = y
 else:
-   largest = c
+   largest = z
 print("The largest number is", largest)
 ```
 ----------------------------------------
@@ -402,18 +400,18 @@ print("The largest number is", largest)
 
 ### **Question:**
 
-> ***Write a Program to Find Absolute value of a Number.***
+> ***Write a program to find absolute value of a number.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-num = int(input("Enter a number: "))
-if num >= 0:
-		print(num)
+x = int(input("Enter a number: "))
+if x >= 0:
+		print(x)
 else:
-		print(-num)
+		print(-x)
 ```
 ----------------------------------------
 
@@ -421,19 +419,21 @@ else:
 
 ### **Question:**
 
-> ***Write a program to Find the length of a String.***
+> ***Write a program to find the length of a string.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
+
 print("Enter 'y' for exit.")
-string = input("Enter a string: ")
-if string == 'y':
+i = input("Enter a string: ")
+if i == 'y':
     exit()
 else:
-    print("Length of the string =", len(string))
+    print("Length of the string is: ", len(i))
+    
 ```
 ----------------------------------------
 
@@ -441,16 +441,16 @@ else:
 
 ### **Question:**
 
-> ***Write a program to Print Natural Numbers from 1 to N.***
+> ***Write a program to print natural numbers from 1 to x.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-N = int(input("Please Enter any Number: "))
-for i in range(1, N+1):
-    print (i)
+x = int(input("Please Enter any Number: "))
+for i in range(1, x+1):
+    print(i)
 ```
 ----------------------------------------
 
@@ -459,19 +459,19 @@ for i in range(1, N+1):
 
 ### **Question:**
 
-> ***Write a program to calculate the sum and average of Natural Numbers from 1 to N.***
+> ***Write a program to calculate the sum and average of natural numbers from 1 to x.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-N = int(input("Please Enter any Number: "))
+x = int(input("Please Enter any Number: "))
 sum = 0
-for i in range(1,N+1):
+for i in range(1,x+1):
   sum = sum + i
 print(sum)
-average = sum / N
+average = sum / x
 print(average)
 ```
 ----------------------------------------
@@ -481,16 +481,16 @@ print(average)
 
 ### **Question:**
 
-> ***Write a program to Print a Statement Any Number of Times.***
+> ***Write a program to print a statement any number of times.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-n = int(input("Please Enter any Number: "))
-for i in range(n):
-    print("hello world")
+x = int(input("Please Enter any Number: "))
+for i in range(x):
+    print("Albert Einstein")
 ```
 ----------------------------------------
 
@@ -498,20 +498,20 @@ for i in range(n):
 
 ### **Question:**
 
-> ***Write a program To Multiply Two Numbers Using Function.***
+> ***Write a program to multiply two numbers using Function.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-def my_function():
-    a = int(input("enter a number: "))
-    b=int(input("enter a number: "))
-    c= a*b
-    return c
-d = my_function()
-print (d)
+def myfunc():
+    x = int(input("Enter a number: "))
+    y=int(input("Enter a number: "))
+    z= x*y
+    return z
+i = myfunc()
+print(i)
 ```
 ----------------------------------------
 
@@ -519,16 +519,16 @@ print (d)
 
 ### **Question:**
 
-> ***Write a program To add an item to the end of the list.***
+> ***Write a program to add an item to the end of the list.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-list1 = ["pen", "book", "ball"]
-list1.append("bat")
-print(list1)
+x = ["pen", "book", "ball"]
+x.append("bat")
+print(x)
 ```
 ----------------------------------------
 
@@ -536,16 +536,16 @@ print(list1)
 
 ### **Question:**
 
-> ***Write a program To remove an item from the list.***
+> ***Write a program to remove an item from the list.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-list1 = ["pen", "book", "ball"]
-list1.remove("ball")
-print(list1)
+x = ["pen", "book", "ball"]
+x.remove("ball")
+print(x)
 ```
 ----------------------------------------
 
@@ -553,16 +553,16 @@ print(list1)
 
 ### **Question:**
 
-> ***Write a program To print the number of elements in an array.***
+> ***Write a program to print the number of elements in an array.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-list1 = ["pen", "book", "ball"]
-a = len(list1)
-print(a)
+x = ["pen", "book", "ball"]
+y = len(x)
+print(y)
 ```
 ----------------------------------------
 
@@ -570,7 +570,7 @@ print(a)
 
 ### **Question:**
 
-> ***Write a program To calculate the variance and standard deviation of the elements of the list.***
+> ***Write a program to calculate the variance and standard deviation of the elements of the list.***
 
 ---------------------------------------
 
@@ -578,9 +578,9 @@ print(a)
 
 ```python
 import numpy as np
-a= [2,6,8,12,18,24,28,32]
-variance= np.var(a)
-std = np.std(a)
+x= [2,6,8,12,18,24,28,32]
+variance= np.var(x)
+std = np.std(x)
 print(variance)
 print(std)
 ```
@@ -598,9 +598,9 @@ print(std)
 <strong>Solution: </strong>
 
 ```python
-list1 = [4, 5, 6, 7]
-list2 = [4, 5]
-print(list(set(list1) - set(list2)))
+x = [4, 5, 6, 7]
+y = [4, 5]
+print(list(set(x) - set(y)))
 ```
 ----------------------------------------
 
@@ -616,8 +616,8 @@ print(list(set(list1) - set(list2)))
 
 ```python
 import random
-list = ['Paper', 'Pencil', 'Book', 'Bag', 'Pen']
-print(random.choice(list))
+x = ['Paper', 'Pencil', 'Book', 'Bag', 'Pen']
+print(random.choice(x))
 ```
 ----------------------------------------
 
@@ -650,9 +650,9 @@ for x in range(6):
 <strong>Solution: </strong>
 
 ```python
-a = input("What's your name? ")
-print(a.upper())
-print(a.lower())
+x = input("What is your name? ")
+print(x.upper())
+print(x.lower())
 ```
 ----------------------------------------
 
@@ -667,8 +667,8 @@ print(a.lower())
 <strong>Solution: </strong>
 
 ```python
-string = "myw3schools.com"
-print(string.startswith("w3s"))
+x = "science.com"
+print(x.startswith("phy"))
 ```
 ----------------------------------------
 
@@ -683,9 +683,9 @@ print(string.startswith("w3s"))
 <strong>Solution: </strong>
 
 ```python
-n = int(input("Enter a number: "))
+x = int(input("Enter a number: "))
 for i in range(1,11):
-   print(n,'x',i,'=',n*i)
+   print(x,'x',i,'=',x*i)
 ```
 ----------------------------------------
 
@@ -701,12 +701,12 @@ for i in range(1,11):
 
 ```python
 print("Enter lengths of the triangle sides: ")
-a = int(input("a: "))
-b = int(input("b: "))
-c = int(input("c: "))
-if a == b == c:
+x = int(input("x: "))
+y = int(input("y: "))
+z = int(input("z: "))
+if x == y == z:
 	print("Equilateral triangle")
-elif a==b or b==c or c==a:
+elif x==y or y==z or z==x:
 	print("isosceles triangle")
 else:
 	print("Scalene triangle")
@@ -725,13 +725,13 @@ else:
 <strong>Solution: </strong>
 
 ```python
-a = int(input("enter a number: "))
-b = int(input("enter a number: "))
-c= a+b
-if c in range(15, 20):
+x = int(input("Enter a number: "))
+y = int(input("Enter a number: "))
+z= x+y
+if z in range(15, 20):
         print (20)
 else:
-        print(c) 
+        print(z) 
 ```
 ----------------------------------------
 
