@@ -93,8 +93,8 @@ print(calendar.month(yy, mm))
 <strong>Solution: </strong>
 
 ```python
-string = input("Enter string: ")
-print("You entered:",string)
+x= input("Enter string: ")
+print("You entered:", x)
 ```
 ----------------------------------------
 
@@ -102,17 +102,17 @@ print("You entered:",string)
 
 ### **Question:**
 
-> ***Write a program to Concatenate Two Strings.***
+> ***Write a program to concatenate two strings.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-string1 = input("Enter first string to concatenate: ")
-string2 = input("Enter second string to concatenate: ")
-string3 = string1 + string2
-print("String after concatenation = ",string3)
+x = input("Enter first string to concatenate: ")
+y = input("Enter second string to concatenate: ")
+z = x + y
+print("String after concatenation = ", z)
 ```
 ----------------------------------------
 
@@ -120,16 +120,16 @@ print("String after concatenation = ",string3)
 
 ### **Question:**
 
-> ***Write a program to Check if an item exists in the list.***
+> ***Write a program to check if an item exists in the list.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-list_of_items = ["ball", "book", "pencil"]
-item = input("Type item to check: ")
-if item in list_of_items:
+x = ["ball", "book", "pencil"]
+i = input("Type item to check: ")
+if i in x:
  print("Item exists in the list.")
 else:
   print("Item does not exist in the list.") 
@@ -140,17 +140,17 @@ else:
 
 ### **Question:**
 
-> ***Write a program to Join two or more lists.***
+> ***Write a program to join two or more lists.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-list1 = ["This" , "is", "a", "sample", "program"]
-list2 = [10, 2, 45, 3, 5, 7, 8, 10]
-finalList = list1 + list2
-print(finalList) 
+x = ["This" , "is", "a", "blood", "sample"]
+y = [20, 6, 55, 3, 9, 7, 18, 20]
+z = x + y
+print(z) 
 ```
 ----------------------------------------
 
@@ -158,7 +158,7 @@ print(finalList)
 
 ### **Question:**
 
-> ***Write a program to Calculate Cube of a Number.***
+> ***Write a program to calculate cube of a number.***
 
 ---------------------------------------
 
@@ -166,9 +166,9 @@ print(finalList)
 
 ```python
 import math 
-a = int(input("Enter a number: "))
-b=math.pow(a,3)
-print (b) 
+x = int(input("Enter a number: "))
+y=math.pow(x,3)
+print(y) 
 ```
 ----------------------------------------
 
@@ -176,7 +176,7 @@ print (b)
 
 ### **Question:**
 
-> ***Write a program to Calculate Square root of a Number.***
+> ***Write a program to calculate square root of a number.***
 
 ---------------------------------------
 
@@ -184,9 +184,9 @@ print (b)
 
 ```python
 import math 
-a = int(input("Enter a number: "))
-b=math.sqrt(a)
-print (b)  
+x = int(input("Enter a number: "))
+y=math.sqrt(x)
+print (y)  
 ```
 ----------------------------------------
 
@@ -194,15 +194,15 @@ print (b)
 
 ### **Question:**
 
-> ***Write a program that takes a list of numbers (for example, a = [5, 10, 15, 20, 25]) and makes a new list of only the first and last elements of the given list.***
+> ***Write a program that takes a list of numbers (for example, i = [6, 10, 75, 60, 55]) and makes a new list of only the first and last elements of the given list.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-a = [5, 10, 15, 20, 25]
-print([a[0], a[4]]) 
+i = [6, 10, 75, 60, 55]
+print([i[0], i[4]]) 
 ```
 ----------------------------------------
 
@@ -210,16 +210,16 @@ print([a[0], a[4]])
 
 ### **Question:**
 
-> ***Take a list, say for example this one: a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] and write a program that prints out all the elements of the list that are less than 5.***
+> ***Take a list, say for example this one: x = [1, 1, 2, 3, 2, 8, 18, 31, 14, 25, 78] and write a program that prints out all the elements of the list that are less than 4.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-for i in a:
-    if i < 5:
+x = [1, 1, 2, 3, 2, 8, 18, 31, 14, 25, 78]
+for i in x:
+    if i < 4:
         print(i)
 ```
 ----------------------------------------
@@ -229,16 +229,16 @@ for i in a:
 
 ### **Question:**
 
-> ***Let's say I give you a list saved in a variable: a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]. Write one line of Python that takes this list 'a' and makes a new list that has only the even elements of this list in it.***
+> ***Let's say I give you a list saved in a variable: x = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]. Write one line of Python that takes this list 'x' and makes a new list that has only the even elements of this list in it.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-b = [number for number in a if number % 2 == 0]
-print(b)
+x = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+y = [i for i in a if i % 2 == 0]
+print(y)
 ```
 ----------------------------------------
 
