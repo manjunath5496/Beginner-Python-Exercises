@@ -2536,7 +2536,7 @@ print('n with its rightmost set bit cleared equals:', ans)
 
 ### **Question:**
 
-> ***Write a program to generate all gray codes using recursion.***
+> ***Write a program to generate a new string with the prefix "Al" from a given string. Return the given text in its original form if it already contains the "Al" prefix.***
 
 ---------------------------------------
 
@@ -2544,23 +2544,12 @@ print('n with its rightmost set bit cleared equals:', ans)
 
 ```python
  
-def get_gray_codes(n):
-    """Return n-bit Gray code in a list."""
-    if n == 0:
-        return ['']
-    first_half = get_gray_codes(n - 1)
-    second_half = first_half.copy()
- 
-    first_half = ['0' + code for code in first_half]
-    second_half = ['1' + code for code in reversed(second_half)]
- 
-    return first_half + second_half
- 
- 
-n = int(input('Enter the number of bits: '))
-codes = get_gray_codes(n)
-print('All {}-bit Gray Codes:'.format(n))
-print(codes)
+def myfunc(x):
+  if len(x) >= 2 and x[:2] == "Al":
+    return x
+  return "Al" + x
+print(myfunc("Albert"))
+print(myfunc("bert"))
  
 ```
 ----------------------------------------
@@ -2570,7 +2559,7 @@ print(codes)
 
 ### **Question:**
 
-> ***Write a program to convert Gray code to binary.***
+> ***Write a program that count all occurrences of the number 5 in a list.***
 
 ---------------------------------------
 
@@ -2578,24 +2567,17 @@ print(codes)
 
 ```python
  
-def gray_to_binary(n):
-    """Convert Gray codeword to binary and return it."""
-    n = int(n, 2) # convert to int
- 
-    mask = n
-    while mask != 0:
-        mask >>= 1
-        n ^= mask
- 
-    # bin(n) returns n's binary representation with a '0b' prefixed
-    # the slice operation is to remove the prefix
-    return bin(n)[2:]
- 
- 
-g = input('Enter Gray codeword: ')
-b = gray_to_binary(g)
-print('In binary:', b)
- 
+def myfunc(y):
+  i = 0  
+  for x in y:
+    if x == 5:
+      i = i + 1
+
+  return i
+
+print(myfunc([11, 5, 16, 18, 15]))
+print(myfunc([17, 14, 5, 12, 9, 5]))
+
 ```
 ----------------------------------------
 
