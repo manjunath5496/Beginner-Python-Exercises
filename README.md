@@ -1912,11 +1912,11 @@ else:
 <strong>Solution: </strong>
 
 ```python
-principle=float(input("Enter the principle amount:"))
-time=int(input("Enter the time(years):"))
-rate=float(input("Enter the rate:"))
-simple_interest=(principle*time*rate)/100
-print("The simple interest is:",simple_interest)
+x=float(input("Enter the principal amount: "))
+y=float(input("Enter the rate: "))
+z=int(input("Enter the time(years): "))
+simple_interest=(x*y*z)/100
+print("The simple interest is: ", simple_interest)
  
 ```
 ----------------------------------------
