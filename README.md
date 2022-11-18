@@ -2503,7 +2503,7 @@ else:
 
 ### **Question:**
 
-> ***Write a program to clear the rightmost set bit of a number.***
+> ***Write a program to solve (a - b) * (a - b).***
 
 ---------------------------------------
 
@@ -2511,14 +2511,9 @@ else:
 
 ```python
  
-def clear_rightmost_set_bit(n):
-    """Clear rightmost set bit of n and return it."""
-    return n & (n - 1)
- 
- 
-n = int(input('Enter a number: '))
-ans = clear_rightmost_set_bit(n)
-print('n with its rightmost set bit cleared equals:', ans)
+a, b = 2, 4
+result = a * a - 2 * a * b + b * b
+print("({} - {}) ^ 2 = {}".format(a, b, result))
  
 ```
 ----------------------------------------
@@ -2578,27 +2573,17 @@ print(myfunc([17, 14, 5, 12, 9, 5]))
 
 ### **Question:**
 
-> ***Write a program to convert binary to Gray code.***
+> ***Write a program to determine if a file is present.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
- 
-def binary_to_gray(n):
-    """Convert Binary to Gray codeword and return it."""
-    n = int(n, 2) # convert to int
-    n ^= (n >> 1)
- 
-    # bin(n) returns n's binary representation with a '0b' prefixed
-    # the slice operation is to remove the prefix
-    return bin(n)[2:]
- 
- 
-g = input('Enter binary number: ')
-b = binary_to_gray(g)
-print('Gray codeword:', b)
+
+import os.path
+print(os.path.isfile('1.txt'))
+print(os.path.isfile('1.pdf'))
  
 ```
 ----------------------------------------
