@@ -2329,7 +2329,7 @@ print("The sum of first n positive integers is: ", sum)
 
 n = int(input("Enter a number: "))
 sum = (n * (n + 1)) / 2
-print("Sum of the first", n ,"positive integers is:", sum)
+print("The sum of first", n ,"positive integers is:", sum)
  
 ```
 
