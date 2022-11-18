@@ -1049,7 +1049,7 @@ for i in range(0,x):
     n=int(input("Enter element: "))
     y.append(n)
 avg=sum(y)/x
-print("Average of elements in the list",round(avg,2))
+print("Average of elements in the list: ",round(avg,2))
  
 ```
 ----------------------------------------
