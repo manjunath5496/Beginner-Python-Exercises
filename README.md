@@ -1141,10 +1141,10 @@ else:
 
 ```python
  
-lower=int(input("Enter lower range limit: "))
-upper=int(input("Enter upper range limit: "))
+x=int(input("Enter lower range limit: "))
+y=int(input("Enter upper range limit: "))
 n=int(input("Enter the number to be divided by: "))
-for i in range(lower,upper+1):
+for i in range(x,y+1):
     if(i%n==0):
         print(i)
  
@@ -1177,7 +1177,7 @@ print("Remainder is:", remainder)
 
 ### **Question:**
 
-> ***Write a program to accept three distinct digits and print all possible combinations from the digits.***
+> ***Write a program to determine whether a given value is present in a collection of values.***
 
 ---------------------------------------
 
@@ -1185,18 +1185,13 @@ print("Remainder is:", remainder)
 
 ```python
  
-a=int(input("Enter first number:"))
-b=int(input("Enter second number:"))
-c=int(input("Enter third number:"))
-d=[]
-d.append(a)
-d.append(b)
-d.append(c)
-for i in range(0,3):
-    for j in range(0,3):
-        for k in range(0,3):
-            if(i!=j&j!=k&k!=i):
-                print(d[i],d[j],d[k])
+def myfunc(x, i):
+   for value in x:
+       if i == value:
+           return True
+   return False
+print(myfunc([19, 15, 18, 13], 13))
+print(myfunc([15, 18, 13], -11))
  
 ```
 ----------------------------------------
@@ -1214,9 +1209,9 @@ for i in range(0,3):
 
 ```python
  
-lower=int(input("Enter the lower limit for the range:"))
-upper=int(input("Enter the upper limit for the range:"))
-for i in range(lower,upper+1):
+x=int(input("Enter the lower limit for the range: "))
+y=int(input("Enter the upper limit for the range: "))
+for i in range(x,y+1):
     if(i%2!=0):
         print(i)
  
@@ -1261,11 +1256,11 @@ print("Smallest divisor is:",a[0])
 ```python
  
 n=int(input("Enter number:"))
-count=0
+i=0
 while(n>0):
-    count=count+1
+    i=i+1
     n=n//10
-print("The number of digits in the number are:",count)
+print("The number of digits in the number are:", i)
  
 ```
 ----------------------------------------
@@ -1463,8 +1458,8 @@ for j in a:
         even.append(j)
     else:
         odd.append(j)
-print("The even list",even)
-print("The odd list",odd)
+print("The even list", even)
+print("The odd list", odd)
  
 ```
 ----------------------------------------
