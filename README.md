@@ -186,7 +186,7 @@ print(y)
 import math 
 x = int(input("Enter a number: "))
 y=math.sqrt(x)
-print (y)  
+print(y)  
 ```
 ----------------------------------------
 
