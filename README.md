@@ -1043,12 +1043,12 @@ else:
 <strong>Solution: </strong>
 
 ```python
-n=int(input("Enter the number of elements to be inserted: "))
-a=[]
-for i in range(0,n):
-    elem=int(input("Enter element: "))
-    a.append(elem)
-avg=sum(a)/n
+x=int(input("Enter the number of elements to be inserted: "))
+y=[]
+for i in range(0,x):
+    n=int(input("Enter element: "))
+    y.append(n)
+avg=sum(y)/x
 print("Average of elements in the list",round(avg,2))
  
 ```
