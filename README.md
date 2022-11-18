@@ -1116,11 +1116,11 @@ sub5=int(input("Enter marks of the fifth subject: "))
 avg=(sub1+sub2+sub3+sub4+sub4)/5
 if(avg>=90):
     print("Grade: A")
-elif(avg>=80&avg<90):
+elif(avg>=80 and avg<90):
     print("Grade: B")
-elif(avg>=70&avg<80):
+elif(avg>=70 and avg<80):
     print("Grade: C")
-elif(avg>=60&avg<70):
+elif(avg>=60 and avg<70):
     print("Grade: D")
 else:
     print("Grade: F")
@@ -1141,9 +1141,9 @@ else:
 
 ```python
  
-lower=int(input("Enter lower range limit:"))
-upper=int(input("Enter upper range limit:"))
-n=int(input("Enter the number to be divided by:"))
+lower=int(input("Enter lower range limit: "))
+upper=int(input("Enter upper range limit: "))
+n=int(input("Enter the number to be divided by: "))
 for i in range(lower,upper+1):
     if(i%n==0):
         print(i)
@@ -1167,8 +1167,8 @@ a=int(input("Enter the first number: "))
 b=int(input("Enter the second number: "))
 quotient=a//b
 remainder=a%b
-print("Quotient is:",quotient)
-print("Remainder is:",remainder)
+print("Quotient is:", quotient)
+print("Remainder is:", remainder)
  
 ```
 ----------------------------------------
