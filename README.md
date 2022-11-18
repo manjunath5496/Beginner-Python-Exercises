@@ -2306,7 +2306,7 @@ print(round(cosine(x,n),2))
 
 ### **Question:**
 
-> ***Write a program to find the sum of first N Natural Numbers.***
+> ***Write a program to find the sum of first n positive integers.***
 
 ---------------------------------------
 
@@ -2315,13 +2315,24 @@ print(round(cosine(x,n),2))
 ```python
 
 n=int(input("Enter a number: "))
-sum1 = 0
+sum = 0
 while(n > 0):
-    sum1=sum1+n
+    sum=sum+n
     n=n-1
-print("The sum of first n natural numbers is",sum1)
+print("The sum of first n positive integers is: ", sum)
  
 ```
+
+----------------------------------------
+
+```python
+
+n = int(input("Enter a number: "))
+sum = (n * (n + 1)) / 2
+print("Sum of the first", n ,"positive integers is:", sum)
+ 
+```
+
 ----------------------------------------
 # Question 103
 
