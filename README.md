@@ -1468,22 +1468,20 @@ print("The odd list", odd)
 
 ### **Question:**
 
-> ***Write a program to sort the list according to the second element in the sublist.***
+> ***Write a program to concatenate all elements in a list into a string and return it.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-a=[['A',34],['B',21],['C',26]]
-for i in range(0,len(a)):
-    for j in range(0,len(a)-i-1):
-        if(a[j][1]>a[j+1][1]):
-            temp=a[j]
-            a[j]=a[j+1]
-            a[j+1]=temp
- 
-print(a)
+def myfunc(list):
+    result= ''
+    for i in list:
+        result += str(i)
+    return result
+
+print(myfunc([2, 4, 13, 4]))
  
 ```
 ----------------------------------------
@@ -1493,7 +1491,7 @@ print(a)
 
 ### **Question:**
 
-> ***Write a program to find the second largest number in a list using bubble sort.***
+> ***Write a program to add the three integers given. However, the sum will be zero if two values are equal.***
 
 ---------------------------------------
 
@@ -1501,18 +1499,17 @@ print(a)
 
 ```python
  
-a=[]
-n=int(input("Enter number of elements:"))
-for i in range(1,n+1):
-    b=int(input("Enter element:"))
-    a.append(b)
-for i in range(0,len(a)):
-    for j in range(0,len(a)-i-1):
-        if(a[j]>a[j+1]):
-            temp=a[j]
-            a[j]=a[j+1]
-            a[j+1]=temp 
-print('Second largest number is:',a[n-2])
+def myfunc(a, b, c):
+    if a == b or b == c or a==c:
+        sum = 0
+    else:
+        sum = a + b + c
+    return sum
+print(myfunc(12, 11, 12))
+print(myfunc(13, 22, 22))
+print(myfunc(22, 22, 22))
+print(myfunc(12, 22, 13))
+
  
 ```
 ----------------------------------------
@@ -1530,9 +1527,9 @@ print('Second largest number is:',a[n-2])
 ```python
  
 a=[]
-n=int(input("Enter number of elements:"))
+n=int(input("Enter number of elements: "))
 for i in range(1,n+1):
-    b=input("Enter element:")
+    b=input("Enter element: ")
     a.append(b)
 a.sort(key=len)
 print(a)
