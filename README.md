@@ -847,25 +847,16 @@ print("The ASCII value of '" + x + "' is", ord(x))
 
 ### **Question:**
 
-> ***Write a program to list files in a directory.***
+> ***Write a program to print "#" without a newline or space.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-# Import os module to read directory
-import os
-
-# Set the directory path
-path = 'C:/Users/Manju/.spyder-py3/'
-
-# Read the content of the file
-files = os.listdir(path)
-
-# Print the content of the directory
-for file in files:
-    print(file)
+for x in range(0, 5):
+    print('#', end="")
+print("\n")
  
 ```
 ----------------------------------------
@@ -875,35 +866,16 @@ for file in files:
 
 ### **Question:**
 
-> ***Write a program to read and write file.***
+> ***Write a program that will convert a string to a float or an integer.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-#Assign the filename
-filename = "languages.txt"
-# Open file for writing
-fileHandler = open(filename, "w")
-
-# Add some text
-fileHandler.write("Bash\n")
-fileHandler.write("Python\n")
-fileHandler.write("PHP\n")
-
-# Close the file
-fileHandler.close()
-
-# Open file for reading
-fileHandler = open(filename, "r")
-
-# Read a file line by line
-for line in fileHandler:
-  print(line)
- 
-# Close the file
-fileHandler.close()
+x = "546.11235"
+print(float(x))
+print(int(float(x)))
  
 ```
 ----------------------------------------
@@ -948,32 +920,16 @@ for customer in customers:
 
 ### **Question:**
 
-> ***Write a program to add and search data in the set.***
+> ***Write a program to obtain the details of the math module.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-# Define the number set
-numbers = {23, 90, 56, 78, 12, 34, 67}
- 
-# Add a new data
-numbers.add(50)
-# Print the set values
-print(numbers)
 
-message = "Number is not found"
-
-# Take a number value for search
-search_number = int(input("Enter a number:"))
-# Search the number in the set
-for val in numbers:
-    if val == search_number:
-        message = "Number is found"
-        break
-
-print(message)
+import math             
+print(dir(math))
  
 ```
 ----------------------------------------
@@ -1058,20 +1014,23 @@ print("Average of elements in the list: ",round(avg,2))
 
 ### **Question:**
 
-> ***Write a program to exchange the values of two numbers without using a temporary variable.***
+> ***Write a program that sorts three integers without the need of loops or conditional statements.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-a=int(input("Enter value of first variable: "))
-b=int(input("Enter value of second variable: "))
-a=a+b
-b=a-b
-a=a-b
-print("a is:",a," b is:",b)
- 
+
+a = int(input("Enter the first number: "))
+b = int(input("Enter the second number: "))
+c = int(input("Enter the third number: "))
+
+x = min(a, b, c)
+z = max(a, b, c)
+y = (a + b + c) - x - z
+print("Numbers in sorted order: ", x, y, z)
+
 ```
 ----------------------------------------
 
@@ -1079,20 +1038,20 @@ print("a is:",a," b is:",b)
 
 ### **Question:**
 
-> ***Write a program to reverse a given number.***
+> ***Write a program to determine the sum of digits of a number.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-n=int(input("Enter number: "))
-rev=0
-while(n>0):
-    dig=n%10
-    rev=rev*10+dig
-    n=n//10
-print("Reverse of the number:",rev)
+
+num = int(input("Enter a four digit number: "))
+x  = num //1000
+y = (num - x*1000)//100
+z = (num - x*1000 - y*100)//10
+c = num - x*1000 - y*100 - z*10
+print("The number's digits add up to: ", x+y+z+c)
  
 ```
 ----------------------------------------
