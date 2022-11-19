@@ -1616,7 +1616,7 @@ print(sort(a))
 
 ### **Question:**
 
-> ***Write a program to swap the first and last value of a list.***
+> ***Write a program to determine whether the system is a big-endian or little-endian platform.***
 
 ---------------------------------------
 
@@ -1624,16 +1624,13 @@ print(sort(a))
 
 ```python
 
-a=[]
-n= int(input("Enter the number of elements in list:"))
-for x in range(0,n):
-    element=int(input("Enter element" + str(x+1) + ":"))
-    a.append(element)
-temp=a[0]
-a[0]=a[n-1]
-a[n-1]=temp
-print("New list is:")
-print(a)
+import sys
+print()
+if sys.byteorder == "little":
+    print("Little-endian platform.")
+else:
+    print("Big-endian platform.")
+print()
  
 ```
 ----------------------------------------
@@ -1643,7 +1640,7 @@ print(a)
 
 ### **Question:**
 
-> ***Write a program to remove the duplicate items from a list.***
+> ***Write a program to examine the available built-in modules.***
 
 ---------------------------------------
 
@@ -1651,19 +1648,11 @@ print(a)
 
 ```python
 
-a=[]
-n= int(input("Enter the number of elements in list:"))
-for x in range(0,n):
-    element=int(input("Enter element" + str(x+1) + ":"))
-    a.append(element)
-b = set()
-unique = []
-for x in a:
-    if x not in b:
-        unique.append(x)
-        b.add(x)
-print("Non-duplicate items:")
-print(unique)
+import sys
+x = ', '.join(sorted(sys.builtin_module_names))
+print("The available built-in modules are: ")
+print()
+print(x)
  
 ```
 ----------------------------------------
@@ -1673,7 +1662,7 @@ print(unique)
 
 ### **Question:**
 
-> ***Write a program to read a list of words and return the length of the longest one.***
+> ***Write a program to determine an object's size in bytes.***
 
 ---------------------------------------
 
@@ -1681,19 +1670,13 @@ print(unique)
 
 ```python
 
-a=[]
-n= int(input("Enter the number of elements in list:"))
-for x in range(0,n):
-    element=input("Enter element" + str(x+1) + ":")
-    a.append(element)
-max1=len(a[0])
-temp=a[0]
-for i in a:
-    if(len(i)>max1):
-       max1=len(i)
-       temp=i
-print("The word with the longest length is:")
-print(temp)
+import sys
+x = "three"
+y = 154
+z = [11, 12, 13, 'Ball', 'Bat']
+print("Size of ",x,"=",str(sys.getsizeof(x))+ " bytes")
+print("Size of ",y,"=",str(sys.getsizeof(y))+ " bytes")
+print("Size of ",z,"=",str(sys.getsizeof(z))+ " bytes")
  
 ```
 ----------------------------------------
@@ -1703,7 +1686,7 @@ print(temp)
 
 ### **Question:**
 
-> ***Write a program to remove the i<sup>th</sup> occurrence of the given word in list where words can repeat.***
+> ***Write a program to concatenate 'n' strings.***
 
 ---------------------------------------
 
@@ -1711,30 +1694,11 @@ print(temp)
 
 ```python
 
-a=[]
-n= int(input("Enter the number of elements in list:"))
-for x in range(0,n):
-    element=input("Enter element" + str(x+1) + ":")
-    a.append(element)
-print(a)
-c=[]
-count=0
-b=input("Enter word to remove: ")
-n=int(input("Enter the occurrence to remove: "))
-for i in a:
-    if(i==b):
-        count=count+1
-        if(count!=n):
-            c.append(i)
-    else:
-        c.append(i)
-if(count==0):
-    print("Item not found ")
-else: 
-    print("The number of repetitions is: ",count)
-    print("Updated list is: ",c)
-    print("The distinct elements are: ",set(a))
-
+x = ['Stephen', 'William', 'Hawking']  
+i = '-'.join(x)
+print()
+print(i)
+print()
  
 ```
 ----------------------------------------
