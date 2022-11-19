@@ -1747,7 +1747,7 @@ print('The volume of the sphere is: ',V)
 
 ### **Question:**
 
-> ***Write a program to find the element that occurs odd number of times in a list.***
+> ***Write a program to check whether every number in a list exceeds a specific number.***
 
 ---------------------------------------
 
@@ -1755,26 +1755,12 @@ print('The volume of the sphere is: ',V)
 
 ```python
 
-def find_odd_occurring(alist):
-    """Return the element that occurs odd number of times in alist.
- 
-    alist is a list in which all elements except one element occurs an even
-    number of times.
-    """
-    ans = 0
- 
-    for element in alist:
-        ans ^= element
- 
-    return ans
- 
- 
-alist = input('Enter the list: ').split()
-alist = [int(i) for i in alist]
-ans = find_odd_occurring(alist)
-print('The element that occurs odd number of times:', ans)
+x = [12, 33, 44, 55]
+print()
+print(all(i > 11 for i in x))
+print(all(i > 100 for i in x))
+print()
 
- 
 ```
 ----------------------------------------
 
@@ -1783,42 +1769,17 @@ print('The element that occurs odd number of times:', ans)
 
 ### **Question:**
 
-> ***Write a program to check if a date is valid and print the incremented date if it is.***
+> ***Write a program that count the occurrences of a particular character within a given string.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-date=input("Enter the date: ")
-dd,mm,yy=date.split('/')
-dd=int(dd)
-mm=int(mm)
-yy=int(yy)
-if(mm==1 or mm==3 or mm==5 or mm==7 or mm==8 or mm==10 or mm==12):
-    max1=31
-elif(mm==4 or mm==6 or mm==9 or mm==11):
-    max1=30
-elif(yy%4==0 and yy%100!=0 or yy%400==0):
-    max1=29
-else:
-    max1=28
-if(mm<1 or mm>12):
-    print("Date is invalid.")
-elif(dd<1 or dd>max1):
-    print("Date is invalid.")
-elif(dd==max1 and mm!=12):
-    dd=1
-    mm=mm+1
-    print("The incremented date is: ",dd,mm,yy)
-elif(dd==31 and mm==12):
-    dd=1
-    mm=1
-    yy=yy+1
-    print("The incremented date is: ",dd,mm,yy)
-else:
-    dd=dd+1
-    print("The incremented date is: ",dd,mm,yy)
+
+x = "Albert Einstein."  
+print("Number of occurrence of 'e' in the given string: ")
+print(x.count("e"))
  
 ```
 ----------------------------------------
@@ -1854,11 +1815,12 @@ print("The simple interest is: ", simple_interest)
 <strong>Solution: </strong>
 
 ```python
-year=int(input("Enter year to be checked:"))
+
+year=int(input("Enter the year to be checked: "))
 if(year%4==0 and year%100!=0 or year%400==0):
-    print("The year is a leap year!")
+    print("The", year, "is a leap year!")
 else:
-    print("The year isn't a leap year!")
+    print("The", year, "isn't a leap year!")
 
  
 ```
