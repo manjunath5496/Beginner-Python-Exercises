@@ -2137,7 +2137,7 @@ print()
 
 ### **Question:**
 
-> ***Write a program to find the sum of cosine series.***
+> ***Write a program to find out which host the routine is running on.***
 
 ---------------------------------------
 
@@ -2145,19 +2145,9 @@ print()
 
 ```python
 
-import math
-def cosine(x,n):
-    cosx = 1
-    sign = -1
-    for i in range(2, n, 2):
-        pi=22/7
-        y=x*(pi/180)
-        cosx = cosx + (sign*(y**i))/math.factorial(i)
-        sign = -sign
-    return cosx
-x=int(input("Enter the value of x in degrees:"))
-n=int(input("Enter the number of terms:"))
-print(round(cosine(x,n),2))
+import socket
+x = socket.gethostname()
+print("Host name: ", x)
 
  
 ```
@@ -2199,7 +2189,7 @@ print("The sum of first", n ,"positive integers is:", sum)
 
 ### **Question:**
 
-> ***Write a program to find the sum of series: 1 + 1/2 + 1/3 + ….. + 1/N.***
+> ***Write a program to find the sum of series: 1 + 1/2 + 1/3 + ….. + 1/n.***
 
 ---------------------------------------
 
@@ -2207,10 +2197,10 @@ print("The sum of first", n ,"positive integers is:", sum)
 
 ```python
 n=int(input("Enter the number of terms: "))
-sum1=0
+sum=0
 for i in range(1,n+1):
-    sum1=sum1+(1/i)
-print("The sum of series is",round(sum1,2))
+    sum=sum+(1/i)
+print("The sum of series is: ", round(sum,2))
  
 ```
 ----------------------------------------
