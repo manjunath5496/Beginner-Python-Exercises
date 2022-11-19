@@ -1238,13 +1238,13 @@ print("The number of digits in the number are:", i)
 ```python
  
 n=int(input("Enter a number: "))
-a=[]
-for i in range(1,n+1):
-    print(i,sep=" ",end=" ")
+x=[]
+for i in range(1, n+1):
+    print(i, sep=" ", end=" ")
     if(i<n):
-        print("+",sep=" ",end=" ")
-    a.append(i)
-print("=",sum(a))
+        print("+", sep=" ", end=" ")
+    x.append(i)
+print("=",sum(x))
  
 print()
  
@@ -1265,14 +1265,14 @@ print()
 ```python
 
 n=int(input("Enter a number: "))
-for j in range(1,n+1):
-    a=[]
-    for i in range(1,j+1):
-        print(i,sep=" ",end=" ")
+for j in range(1, n+1):
+    x=[]
+    for i in range(1, j+1):
+        print(i, sep=" ", end=" ")
         if(i<j):
             print("+",sep=" ",end=" ")
-        a.append(i)
-    print("=",sum(a))
+        x.append(i)
+    print("=", sum(x))
  
 print()
  
@@ -1293,12 +1293,12 @@ print()
 ```python
 
 n=int(input("Enter a number: "))
-for i in range(0,n):
-    for j in range(0,n):
+for i in range(0, n):
+    for j in range(0, n):
         if(i==j):
-            print("1",sep=" ",end=" ")
+            print("1", sep=" ", end=" ")
         else:
-            print("0",sep=" ",end=" ")
+            print("0", sep=" ", end=" ")
     print()
  
 ```
