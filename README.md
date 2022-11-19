@@ -1541,7 +1541,7 @@ print(a)
 
 ### **Question:**
 
-> ***Write a program to find the cumulative sum of a list where the i<sup>th</sup> element is the sum of the first i+1 elements from the original list.***
+> ***Write a program to convert a distance (in feet) to inches, yards, and miles.***
 
 ---------------------------------------
 
@@ -1549,14 +1549,15 @@ print(a)
 
 ```python
  
-a=[]
-n= int(input("Enter the number of elements in list:"))
-for x in range(0,n):
-    element=int(input("Enter element" + str(x+1) + ":"))
-    a.append(element)
-b=[sum(a[0:x+1]) for x in range(0,len(a))]
-print("The original list is: ",a)
-print("The new list is: ",b)
+
+n = int(input("Enter the distance in feet: "))
+x = n * 12
+y = n / 3.0
+z = n / 5280.0
+
+print("The distance in inches is: %i inches." % x)
+print("The distance in yards is: %.2f yards." % y)
+print("The distance in miles is: %.2f miles." % z)
  
 ```
 ----------------------------------------
