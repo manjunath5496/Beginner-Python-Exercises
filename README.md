@@ -2209,27 +2209,17 @@ print("The sum of series is: ", round(sum,2))
 
 ### **Question:**
 
-> ***Write a program to determine all Pythagorean triplets till the upper limit.***
+> ***Write a program to get numbers divisible by 12 from a list using an anonymous function.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-limit=int(input("Enter upper limit:"))
-c=0
-m=2
-while(c<limit):
-    for n in range(1,m+1):
-        a=m*m-n*n
-        b=2*m*n
-        c=m*m+n*n
-        if(c>limit):
-            break
-        if(a==0 or b==0 or c==0):
-            break
-        print(a,b,c)
-    m=m+1
+
+x = [55, 144, 72, 155, 120, 135, 540]
+result = list(filter(lambda i: (i % 15 == 0), x))
+print("Numbers divisible by 12 are: ", result)
  
 ```
 ----------------------------------------
@@ -2238,24 +2228,18 @@ while(c<limit):
 
 ### **Question:**
 
-> ***Write a program to search the number of times a particular number occurs in a list.***
+> ***Write a program to format a given string with a string length limitation.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-a=[]
-n=int(input("Enter number of elements:"))
-for i in range(1,n+1):
-    b=int(input("Enter element:"))
-    a.append(b)
-k=0
-num=int(input("Enter the number to be counted:"))
-for j in a:
-    if(j==num):
-        k=k+1
-print("Number of times",num,"appears is",k)
+
+x = "987653421066"
+print('%.5s' % x)
+print('%.7s' % x)
+print('%.9s' % x)
 
  
 ```
@@ -2265,28 +2249,21 @@ print("Number of times",num,"appears is",k)
 
 ### **Question:**
 
-> ***Write a program to test Collatz conjecture for a given number.***
+> ***Write a program that accepts a number as input and returns an error if it is not a number.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-def collatz(n):
-    while n > 1:
-        print(n, end=' ')
-        if (n % 2):
-            # n is odd
-            n = 3*n + 1
-        else:
-            # n is even
-            n = n//2
-    print(1, end='')
- 
- 
-n = int(input('Enter n: '))
-print('Sequence: ', end='')
-collatz(n)
+while True:
+    try:
+        a = int(input("Enter a number: "))
+        print("This is a number")
+        break
+    except ValueError:
+        print("This isn't a number")
+        print()
  
  
 ```
@@ -2297,7 +2274,7 @@ collatz(n)
 
 ### **Question:**
 
-> ***Write a program to count set bits in a number.***
+> ***Write a program to filter the negative numbers from a list.***
 
 ---------------------------------------
 
@@ -2305,16 +2282,9 @@ collatz(n)
 
 ```python
  
-def count_set_bits(n):
-    count = 0
-    while n:
-        n &= n - 1
-        count += 1
-    return count
- 
- 
-n = int(input('Enter n: '))
-print('Number of set bits:', count_set_bits(n))
+x = [22, -10, 11, -28, 52, -75]
+y = list(filter(lambda i: i <0, x))
+print("Negative numbers in the above list: ", y)
  
 ```
 ----------------------------------------
@@ -2331,7 +2301,7 @@ print('Number of set bits:', count_set_bits(n))
 
 ```python
  
-def is_power_of_two(n):
+def myfunc(n):
     """Return True if n is a power of two."""
     if n <= 0:
         return False
@@ -2341,7 +2311,7 @@ def is_power_of_two(n):
  
 n = int(input('Enter a number: '))
  
-if is_power_of_two(n):
+if myfunc(n):
     print('{} is a power of two.'.format(n))
 else:
     print('{} is not a power of two.'.format(n))
