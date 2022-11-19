@@ -4812,7 +4812,7 @@ else:
 
 ### **Question:**
 
-> ***Write a program to Convert String to Uppercase.***
+> ***Write a program to convert string to Uppercase.***
 
 ---------------------------------------
 
@@ -4832,7 +4832,7 @@ print("String in Uppercase =  ", string)
 
 ### **Question:**
 
-> ***Write a program to Convert String to Lowercase.***
+> ***Write a program to convert string to Lowercase.***
 
 ---------------------------------------
 
@@ -4853,7 +4853,7 @@ print("String in Lowercase =  ", string)
 
 ### **Question:**
 
-> ***Write a program to Convert Decimal to Binary, octal, and Hexadecimal.***
+> ***Write a program to convert Decimal to Binary, octal, and Hexadecimal.***
 
 ---------------------------------------
 
@@ -4918,7 +4918,7 @@ print("In twenty years, you will be", age + 20, "years old!")
 
 ### **Question:**
 
-> ***Write a program to print the Number of seconds in Year.***
+> ***Write a program to print the number of seconds in year.***
 
 ---------------------------------------
 
