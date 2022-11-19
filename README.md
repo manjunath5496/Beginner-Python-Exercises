@@ -1830,28 +1830,22 @@ else:
 
 ### **Question:**
 
-> ***Write a program to compute prime factors of an integer.***
+> ***Write a program that determines if a file path points to a file or a directory.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-n=int(input("Enter an integer:"))
-print("Factors are:")
-i=1
-while(i<=n):
-    k=0
-    if(n%i==0):
-        j=1
-        while(j<=i):
-            if(i%j==0):
-                k=k+1
-            j=j+1
-        if(k==2):
-            print(i)
-    i=i+1
- 
+import os  
+path="1.txt"  
+if os.path.isdir(path):  
+    print("It is a directory")  
+elif os.path.isfile(path):  
+    print("It is a regular file")  
+else:  
+    print("It is a unique file (socket, FIFO, device file)" )
+print()
  
 ```
 ----------------------------------------
@@ -1869,10 +1863,10 @@ while(i<=n):
 
 ```python
  
-n=int(input("Enter an integer:"))
-print("The divisors of the number are:")
-for i in range(1,n+1):
-    if(n%i==0):
+x=int(input("Enter an integer: "))
+print("The divisors of", x, "are: ")
+for i in range(1, x+1):
+    if(x%i==0):
         print(i)
  
 ```
@@ -1890,7 +1884,7 @@ for i in range(1,n+1):
 
 ```python
  
-n=int(input("Enter the number to print the tables for:"))
+n=int(input("Enter the number to print the tables for: "))
 for i in range(1,11):
     print(n,"x",i,"=",n*i)
  
@@ -1913,9 +1907,9 @@ n=int(input("Enter any number: "))
 a=list(map(int,str(n)))
 b=list(map(lambda x:x**3,a))
 if(sum(b)==n):
-    print("The number is an armstrong number. ")
+    print("The number", n, "is an armstrong number. ")
 else:
-    print("The number isn't an arsmtrong number. ")
+    print("The number", n, "isn't an arsmtrong number. ")
  
 ```
 ----------------------------------------
@@ -1944,7 +1938,7 @@ print(site.getsitepackages())
 
 ### **Question:**
 
-> ***Write a program to check if a number is a Perfect number.***
+> ***Write a program to check if a number is a perfect number.***
 
 ---------------------------------------
 
@@ -1952,15 +1946,15 @@ print(site.getsitepackages())
 
 ```python
  
-n = int(input("Enter any number: "))
-sum1 = 0
-for i in range(1, n):
-    if(n % i == 0):
-        sum1 = sum1 + i
-if (sum1 == n):
-    print("The number is a Perfect number!")
+x = int(input("Enter any number: "))
+sum = 0
+for i in range(1, x):
+    if(x % i == 0):
+        sum = sum + i
+if (sum == x):
+    print("The number", x, "is a perfect number!")
 else:
-    print("The number is not a Perfect number!")
+    print("The number", x, "is not a perfect number!")
  
 ```
 ----------------------------------------
@@ -1978,17 +1972,17 @@ else:
 
 ```python
  
-a=int(input("Enter the first number:"))
-b=int(input("Enter the second number:"))
-if(a>b):
-    min1=a
+x=int(input("Enter the first number: "))
+y=int(input("Enter the second number: "))
+if(x>y):
+    min=x
 else:
-    min1=b
+    min=y
 while(1):
-    if(min1%a==0 and min1%b==0):
-        print("LCM is:",min1)
+    if(min%x==0 and min%y==0):
+        print("LCM is:",min)
         break
-    min1=min1+1
+    min=min+1
  
 ```
 ----------------------------------------
@@ -2007,9 +2001,9 @@ while(1):
 ```python
  
 import math
-a=int(input("Enter the first number:"))
-b=int(input("Enter the second number:"))
-print("The GCD of the two numbers is",math.gcd(a,b))
+x=int(input("Enter the first number: "))
+y=int(input("Enter the second number: "))
+print("The GCD of the two numbers is", math.gcd(x,y))
  
 ```
 ----------------------------------------
