@@ -1329,7 +1329,7 @@ for i in range (n,0,-1):
 
 ### **Question:**
 
-> ***Write a program to print prime numbers in a range using Sieve of Eratosthenes.***
+> ***Write a program to determine the hypotenuse of a right-angled triangle.***
 
 ---------------------------------------
 
@@ -1337,14 +1337,12 @@ for i in range (n,0,-1):
 
 ```python
 
-n=int(input("Enter upper limit of range: "))
-sieve=set(range(2,n+1))
-while sieve:
-    prime=min(sieve)
-    print(prime,end="\t")
-    sieve-=set(range(prime,n+1,prime))
- 
-print()
+from math import sqrt
+print("Enter the lengths of shorter triangle sides: ")
+x = float(input("x: "))
+y = float(input("y: "))
+z = sqrt(x**2 + y**2)
+print("The length of the hypotenuse is: ", z)
 
  
 ```
@@ -1361,13 +1359,13 @@ print()
 <strong>Solution: </strong>
 
 ```python
-a=[]
-n=int(input("Enter number of elements:"))
-for i in range(1,n+1):
-    b=int(input("Enter element:"))
-    a.append(b)
-a.sort()
-print("Largest element is:",a[n-1])
+x=[]
+n=int(input("Enter number of elements: "))
+for i in range(1, n+1):
+    y=int(input("Enter element: "))
+    x.append(y)
+x.sort()
+print("Largest element is: ",x[n-1])
  
 ```
 ----------------------------------------
@@ -1383,13 +1381,13 @@ print("Largest element is:",a[n-1])
 <strong>Solution: </strong>
 
 ```python
-a=[]
-n=int(input("Enter number of elements:"))
+x=[]
+n=int(input("Enter number of elements: "))
 for i in range(1,n+1):
-    b=int(input("Enter element:"))
-    a.append(b)
-a.sort()
-print("Second largest element is:",a[n-2])
+    y=int(input("Enter element: "))
+    x.append(y)
+x.sort()
+print("Second largest element is: ",x[n-2])
  
 ```
 ----------------------------------------
