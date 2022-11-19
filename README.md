@@ -1483,13 +1483,13 @@ print(myfunc(12, 22, 13))
 
 ```python
  
-a=[]
+x=[]
 n=int(input("Enter number of elements: "))
 for i in range(1,n+1):
-    b=input("Enter element: ")
-    a.append(b)
-a.sort(key=len)
-print(a)
+    y=input("Enter element: ")
+    x.append(y)
+x.sort(key=len)
+print(x)
  
 ```
 ----------------------------------------
@@ -1506,9 +1506,9 @@ print(a)
 
 ```python
  
-l_range=int(input("Enter the lower range:"))
-u_range=int(input("Enter the upper range:"))
-a=[(x,x**2) for x in range(l_range,u_range+1)]
+x=int(input("Enter the lower range:"))
+y=int(input("Enter the upper range:"))
+a=[(i,i**2) for i in range(x,y+1)]
 print(a)
  
 ```
