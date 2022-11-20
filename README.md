@@ -3411,7 +3411,7 @@ print([{} for _ in range(10)])
 
 ### **Question:**
 
-> ***Write a program to count the occurrences of a word in a text file.***
+> ***Write a program that computes the average of two lists.***
 
 ---------------------------------------
 
@@ -3419,18 +3419,13 @@ print([{} for _ in range(10)])
 
 ```python
  
-fname = input("Enter file name: ")
-word=input("Enter word to be searched:")
-k = 0
- 
-with open(fname, 'r') as f:
-    for line in f:
-        words = line.split()
-        for i in words:
-            if(i==word):
-                k=k+1
-print("Occurrences of the word:")
-print(k)
+def myfunc(x, y):
+    result = sum(x + y) / len(x + y) 
+    return result
+
+x = [11, 11, 13, 14, 14, 15, 16, 17]
+y = [0, 11, 12, 13, 14, 14, 15, 17, 18]
+print("The Average of two lists: ", myfunc(x, y))
  
 ```
 ----------------------------------------
