@@ -3965,7 +3965,7 @@ for r in result:
 
 ### **Question:**
 
-> ***Write a program to count the number of CPUs being used. ***
+>***Write a program to count the number of CPUs being used.***
 
 ---------------------------------------
 
