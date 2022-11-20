@@ -3856,11 +3856,9 @@ print("Current File Name : ",os.path.realpath(__file__))
 ```python
  
 import random
-
-s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+x = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
 passlen = 8
-p =  "".join(random.sample(s,passlen ))
-print (p)
+print("".join(random.sample(x, passlen)))
  
 ```
 ----------------------------------------
