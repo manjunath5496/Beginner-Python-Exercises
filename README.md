@@ -2420,11 +2420,12 @@ print(os.path.isfile('1.pdf'))
 <strong>Solution: </strong>
 
 ```python
-string=input("Enter string:")
-string=string.replace('a','$')
-string=string.replace('A','$')
-print("Modified string:")
-print(string)
+
+x=input("Enter string: ")
+x=x.replace('a','$')
+x=x.replace('A','$')
+print("Modified string: ")
+print(x)
  
 ```
 ----------------------------------------
@@ -2433,21 +2434,17 @@ print(string)
 
 ### **Question:**
 
-> ***Write a program to remove the n<sup>th</sup> index character from a non-empty string.***
+> ***Write a program to calculate the product of a list of numbers (without using for loop).***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-def remove(string, n):  
-      first = string[:n]   
-      last = string[n+1:]  
-      return first + last
-string=input("Enter the string:")
-n=int(input("Enter the index of the character to remove:"))
-print("Modified string:")
-print(remove(string, n))
+from functools import reduce
+num = [2, 4, 10,11]
+result = reduce( (lambda x, y: x * y), num)
+print("Product of the above numbers is: ", result)
  
 ```
 ----------------------------------------
@@ -2463,12 +2460,12 @@ print(remove(string, n))
 <strong>Solution: </strong>
 
 ```python
-s1=input("Enter first string:")
-s2=input("Enter second string:")
-if(sorted(s1)==sorted(s2)):
-      print("The strings are anagrams.")
+x=input("Enter first string: ")
+y=input("Enter second string: ")
+if(sorted(x)==sorted(y)):
+      print("The 2 strings are anagrams.")
 else:
-      print("The strings aren't anagrams.")
+      print("The 2 strings aren't anagrams.")
 
  
 ```
@@ -2485,12 +2482,12 @@ else:
 <strong>Solution: </strong>
 
 ```python
-def change(string):
-      return string[-1:] + string[1:-1] + string[:1]
-string=input("Enter string:")
-print("Modified string:")
-print(change(string))
- 
+
+def change(x):
+      return x[-1:] + x[1:-1] + x[:1]
+x=input("Enter a string: ")
+print("Modified string: ")
+print(change(x))
  
 ```
 ----------------------------------------
@@ -2531,7 +2528,7 @@ print(vowels)
 
 ```python
  
-string=input("Enter string:")
+string=input("Enter a string: ")
 string=string.replace(' ','-')
 print("Modified string:")
 print(string)
@@ -2551,12 +2548,12 @@ print(string)
 
 ```python
  
-string=input("Enter string:")
-count=0
-for i in string:
-      count=count+1
-print("Length of the string is:")
-print(count)
+s=input("Enter string: ")
+x=0
+for i in s:
+      x=x+1
+print("Length of the string is: ")
+print(x)
  
 ```
 ----------------------------------------
@@ -2566,7 +2563,7 @@ print(count)
 
 ### **Question:**
 
-> ***Write a program to remove the characters of odd index values in a string.***
+> ***Write a program to determine whether lowercase letters are present in a string.***
 
 ---------------------------------------
 
@@ -2574,15 +2571,8 @@ print(count)
 
 ```python
 
-def modify(string):  
-  final = ""   
-  for i in range(len(string)):  
-    if i % 2 == 0:  
-      final = final + string[i]  
-  return final
-string=input("Enter string:")
-print("Modified string is:")
-print(modify(string))
+x = 'Albert Einstein'
+print(any(i.islower() for i in x))
  
 ```
 ----------------------------------------
@@ -2600,16 +2590,16 @@ print(modify(string))
 
 ```python
  
-string=input("Enter string:")
+x=input("Enter a string: ")
 char=0
 word=1
-for i in string:
+for i in x:
       char=char+1
       if(i==' '):
             word=word+1
-print("Number of words in the string:")
+print("Number of words in the string: ")
 print(word)
-print("Number of characters in the string:")
+print("Number of characters in the string: ")
 print(char)
  
 ```
@@ -2620,7 +2610,7 @@ print(char)
 
 ### **Question:**
 
-> ***Write a program to take in two strings and display the larger string without using built-in functions.***
+> ***Write a program that rounds a floating-point integer to a specified number of decimal places.***
 
 ---------------------------------------
 
@@ -2628,22 +2618,10 @@ print(char)
 
 ```python
  
-string1=input("Enter first string:")
-string2=input("Enter second string:")
-count1=0
-count2=0
-for i in string1:
-      count1=count1+1
-for j in string2:
-      count2=count2+1
-if(count1<count2):
-      print("Larger string is:")
-      print(string2)
-elif(count1==count2):
-      print("Both strings are equal.")
-else:
-      print("Larger string is:")
-      print(string1)
+x = 549.968
+print('%f' % x)
+print('%.2f' % x)
+print()
  
 ```
 ----------------------------------------
@@ -2661,12 +2639,12 @@ else:
 
 ```python
  
-string=input("Enter string:")
+x=input("Enter string: ")
 count=0
-for i in string:
+for i in x:
       if(i.islower()):
             count=count+1
-print("The number of lowercase characters is:")
+print("The number of lowercase characters is: ")
 print(count)
  
 ```
@@ -2685,17 +2663,17 @@ print(count)
 
 ```python
 
-string=input("Enter string:")
+x=input("Enter a string: ")
 count1=0
 count2=0
-for i in string:
+for i in x:
       if(i.islower()):
             count1=count1+1
       elif(i.isupper()):
             count2=count2+1
-print("The number of lowercase characters is:")
+print("The number of lowercase characters is: ")
 print(count1)
-print("The number of uppercase characters is:")
+print("The number of uppercase characters is: ")
 print(count2)
  
 ```
@@ -2714,16 +2692,16 @@ print(count2)
 
 ```python
 
-string=input("Enter string:")
+x=input("Enter a string: ")
 count1=0
 count2=0
-for i in string:
+for i in x:
       if(i.isdigit()):
             count1=count1+1
       count2=count2+1
-print("The number of digits is:")
+print("The number of digits is: ")
 print(count1)
-print("The number of characters is:")
+print("The number of characters is: ")
 print(count2)
  
 ```
@@ -2742,12 +2720,12 @@ print(count2)
 
 ```python
 
-string=input("Enter string:")
+x=input("Enter a string: ")
 count=0
-for i in string:
+for i in x:
       count=count+1
-new=string[0:2]+string[count-2:count]
-print("Newly formed string is:")
+new=x[0:2]+x[count-2:count]
+print("Newly formed string is: ")
 print(new)
  
 ```
@@ -2758,7 +2736,7 @@ print(new)
 
 ### **Question:**
 
-> ***Write a program to count the occurrences of each word in a given string sentence.***
+> ***Write a program to create a bytearray from a list.***
 
 ---------------------------------------
 
@@ -2766,18 +2744,12 @@ print(new)
 
 ```python
 
-string=input("Enter string:")
-word=input("Enter word:")
-a=[]
-count=0
-a=string.split(" ")
-for i in range(0,len(a)):
-      if(word==a[i]):
-            count=count+1
-print("Count of the word is:")
-print(count)
+x = [10, 20, 56, 35, 17, 99]
+# Create bytearray from list of integers.
+y = bytearray(x)
+for i in y: print(i)
+print()
 
- 
 ```
 ----------------------------------------
 
@@ -2786,7 +2758,7 @@ print(count)
 
 ### **Question:**
 
-> ***Write a program to check if a substring is present in a given string.***
+> ***Write a program to determine whether an integer fits in 64 bits.***
 
 ---------------------------------------
 
@@ -2794,12 +2766,10 @@ print(count)
 
 ```python
 
-string=input("Enter string:")
-sub_str=input("Enter word:")
-if(string.find(sub_str)==-1):
-      print("Substring not found in string!")
-else:
-      print("Substring in string!")
+x = 60
+if x.bit_length() <= 63:
+    print((-2 ** 63).bit_length())
+    print((2 ** 63).bit_length())
 
  
 ```
