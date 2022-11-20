@@ -3281,30 +3281,20 @@ print(myfunc(11, 12, 12))
 
 ### **Question:**
 
-> ***Write a program to find the LCM of two numbers using recursion.***
+> ***Write a program to extract numbers from a given string.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-def lcm(a,b):
-    lcm.multiple=lcm.multiple+b
-    if((lcm.multiple % a == 0) and (lcm.multiple % b == 0)):
-        return lcm.multiple;
-    else:
-        lcm(a, b)
-    return lcm.multiple
-lcm.multiple=0
-a=int(input("Enter first number:"))
-b=int(input("Enter second number:"))
-if(a>b):
-    LCM=lcm(b,a)
-else:
-    LCM=lcm(a,b)
-print(LCM)
 
- 
+def myfunc(x):
+    result = [int(x) for x in x.split() if x.isdigit()]
+    return result
+x = "5 bags, 10 pencils and 55 books" 
+print(myfunc(x))
+
 ```
 ----------------------------------------
 
@@ -3675,7 +3665,7 @@ print()
 
 ### **Question:**
 
-> ***Write a program to append, delete and display elements of a list using classes.***
+> ***Write a program to remove spaces from a given string.***
 
 ---------------------------------------
 
@@ -3683,43 +3673,13 @@ print()
 
 ```python
 
-class check():
-    def __init__(self):
-        self.n=[]
-    def add(self,a):
-        return self.n.append(a)
-    def remove(self,b):
-        self.n.remove(b)
-    def dis(self):
-        return (self.n)
- 
-obj=check()
- 
-choice=1
-while choice!=0:
-    print("0. Exit")
-    print("1. Add")
-    print("2. Delete")
-    print("3. Display")
-    choice=int(input("Enter choice: "))
-    if choice==1:
-        n=int(input("Enter number to append: "))
-        obj.add(n)
-        print("List: ",obj.dis())
- 
-    elif choice==2:
-        n=int(input("Enter number to remove: "))
-        obj.remove(n)
-        print("List: ",obj.dis())
- 
-    elif choice==3:
-        print("List: ",obj.dis())
-    elif choice==0:
-        print("Exiting!")
-    else:
-        print("Invalid choice!!")
- 
-print()
+def myfunc(x):
+  x = x.replace(' ','')
+  return x
+    
+print(myfunc("a lbe rt ein stein"))
+print(myfunc("a l a n"))
+
  
 ```
 ----------------------------------------
