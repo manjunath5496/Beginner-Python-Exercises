@@ -3896,34 +3896,15 @@ print(calendar.month(yy, mm))
 
 ### **Question:**
 
-> ***Write a program to add two matrices.***
+> ***Write a program to eliminate a newline.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-
-X = [[12,7,3],
-    [4 ,5,6],
-    [7 ,8,9]]
-
-Y = [[5,8,1],
-    [6,7,3],
-    [4,5,9]]
-
-result = [[0,0,0],
-         [0,0,0],
-         [0,0,0]]
-
-# iterate through rows
-for i in range(len(X)):
-   # iterate through columns
-   for j in range(len(X[0])):
-       result[i][j] = X[i][j] + Y[i][j]
-
-for r in result:
-   print(r)
+x='Albert Einstein\n'
+print(x.rstrip())
  
 ```
 ----------------------------------------
@@ -3933,7 +3914,7 @@ for r in result:
 
 ### **Question:**
 
-> ***Write a program to transpose a matrix.***
+> ***Write a program to remove existing indentation from all of the lines in a given text.***
 
 ---------------------------------------
 
@@ -3941,21 +3922,17 @@ for r in result:
 
 ```python
  
-X = [[12,7],
-    [4 ,5],
-    [3 ,8]]
-
-result = [[0,0,0],
-         [0,0,0]]
-
-# iterate through rows
-for i in range(len(X)):
-   # iterate through columns
-   for j in range(len(X[0])):
-       result[j][i] = X[i][j]
-
-for r in result:
-   print(r)
+import textwrap
+x = '''    
+     Albert Einstein was a German-born theoretical physicist, 
+     widely acknowledged to be one of the greatest and most 
+     influential physicists of all time. Einstein is best known 
+     for developing the theory of relativity, but he also made 
+     important contributions to the development of the theory of 
+     quantum mechanics.
+    '''
+print(x)  
+print(textwrap.dedent(x))
  
 ```
 ----------------------------------------
