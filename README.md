@@ -3378,13 +3378,12 @@ print("Number of words: ", num_words)
 
 ```python
  
-fname = input("Enter file name: ")
+x = input("Enter the file name: ")
 num_lines = 0
-with open(fname, 'r') as f:
+with open(x, 'r') as f:
     for line in f:
         num_lines += 1
-print("Number of lines:")
-print(num_lines)
+print("Number of lines: ", num_lines)
  
 ```
 ----------------------------------------
