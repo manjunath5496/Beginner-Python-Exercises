@@ -3165,7 +3165,7 @@ else:
 
 ### **Question:**
 
-> ***Write a program to determine how many times a given letter occurs in a string recursively.***
+> ***Write a program that examines a list of numbers to see if they are all distinct from one another.***
 
 ---------------------------------------
 
@@ -3173,17 +3173,13 @@ else:
 
 ```python
 
-def check(string,ch):
-      if not string:
-        return 0
-      elif string[0]==ch:
-            return 1+check(string[1:],ch)
-      else:
-            return check(string[1:],ch)
-string=input("Enter string:")
-ch=input("Enter character to check:")
-print("Count is:")
-print(check(string,ch))
+def myfunc(x):
+  if len(x) == len(set(x)):
+    return True
+  else:
+    return False;
+print(myfunc([11,15,17,19]))
+print(myfunc([12,14,15,15,17,19]))
 
  
 ```
@@ -3193,7 +3189,7 @@ print(check(string,ch))
 
 ### **Question:**
 
-> ***Write a program to find the fibonacci series using recursion.***
+> ***Write a program to add two positive numbers without using the '+' operator.***
 
 ---------------------------------------
 
@@ -3201,15 +3197,13 @@ print(check(string,ch))
 
 ```python
 
-def fibonacci(n):
-    if(n <= 1):
-        return n
-    else:
-        return(fibonacci(n-1) + fibonacci(n-2))
-n = int(input("Enter number of terms:"))
-print("Fibonacci sequence:")
-for i in range(n):
-    print (fibonacci(i))
+def myfunc(x, y):
+    while y != 0:
+        z = x & y
+        x = x ^ y
+        y = z << 1
+    return x
+print(myfunc(12, 50))
 
  
 ```
@@ -3227,14 +3221,14 @@ for i in range(n):
 
 ```python
 
-def factorial(n):
+def myfunc(n):
     if(n <= 1):
         return 1
     else:
-        return(n*factorial(n-1))
-n = int(input("Enter number:"))
-print("Factorial:")
-print(factorial(n))
+        return(n*myfunc(n-1))
+n = int(input("Enter a number: "))
+print("Factorial of", n, "is:", myfunc(n))
+
  
 ```
 ----------------------------------------
@@ -3242,28 +3236,19 @@ print(factorial(n))
 
 ### **Question:**
 
-> ***Write a program to find the sum of elements in a list recursively.***
+> ***Write a program to determine whether a right triangle is formed by three given side lengths. If the specified sides make a right triangle, print "Yes," otherwise print "No."***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-def sum_arr(arr,size):
-   if (size == 0):
-     return 0
-   else:
-     return arr[size-1] + sum_arr(arr,size-1)
-n=int(input("Enter the number of elements for list:"))
-a=[]
-for i in range(0,n):
-    element=int(input("Enter element:"))
-    a.append(element)
-print("The list is:")
-print(a)
-print("Sum of items in list:")
-b=sum_arr(a,n)
-print(b)
+print("Enter three side lengths of a triangle: ")
+a,b,c = sorted(list(map(int,input().split())))
+if a**2+b**2==c**2:
+    print('Yes')
+else:
+    print('No')
  
 ```
 ----------------------------------------
