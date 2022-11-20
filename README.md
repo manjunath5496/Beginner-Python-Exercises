@@ -3257,26 +3257,22 @@ else:
 
 ### **Question:**
 
-> ***Write a program to find the binary equivalent of a number recursively.***
+> ***Write a program to find the number of equal numbers among three given integers.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-l=[]
-def convert(b):
-    if(b==0):
-        return l
-    dig=b%2
-    l.append(dig)
-    convert(b//2)
-a=int(input("Enter a number: "))
-convert(a)
-l.reverse()
-print("Binary equivalent:")
-for i in l:
-    print (i)
+def myfunc(a, b, c):
+  result= set([a, b, c])
+  if len(result)==3:
+    return 0
+  else:
+    return (4 - len(result))
+
+print(myfunc(11, 11, 11))
+print(myfunc(11, 12, 12))
  
 ```
 ----------------------------------------
