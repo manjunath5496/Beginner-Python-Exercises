@@ -3356,16 +3356,12 @@ print(all(i == 'book' for i in y))
 
 ```python
  
-fname = input("Enter file name: ")
- 
+x = input("Enter the file name: ") 
 num_words = 0
- 
-with open(fname, 'r') as f:
+with open(x, 'r') as f:
     for line in f:
-        words = line.split()
-        num_words += len(words)
-print("Number of words:")
-print(num_words)
+        num_words += len(line.split())
+print("Number of words: ", num_words)
  
 ```
 ----------------------------------------
