@@ -4101,29 +4101,19 @@ jpeg_res("img1.jpg")
 
 ### **Question:**
 
-> ***Write a program to read website source code.***
+> ***Three positive numbers are present in a Python list. Write a program to determine whether the sum of the digits in each number is equal or not. If true, return true; otherwise, return false.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-import sys
 
-if sys.version_info[0] == 3:
-    from urllib.request import urlopen
-else:
-    # Not Python 3 - today, it is most likely to be Python 2
-    # But note that this might need an update when Python 4
-    # might be around one day
-    from urllib import urlopen
+def myfunc(x):
+    return x[0] % 9 == x[1] % 9 == x[2] % 9 
+x = [14, 5, 23]
+print(myfunc(x))
 
-
-# Your code where you can use urlopen
-with urlopen("http://www.myw3schools.com") as url:
-    s = url.read()
-
-print(s)
 ```
 ----------------------------------------
 
@@ -4140,10 +4130,10 @@ print(s)
 
 ```python
 import socket    
-hostname = socket.gethostname()    
-IPAddr = socket.gethostbyname(hostname)    
-print("Your Computer Name is:" + hostname)    
-print("Your Computer IP Address is:" + IPAddr) 
+x = socket.gethostname()    
+y = socket.gethostbyname(x)    
+print("Your Computer Name is: " + x)    
+print("Your Computer IP Address is: " + y) 
 ```
 ----------------------------------------
 
@@ -4151,26 +4141,23 @@ print("Your Computer IP Address is:" + IPAddr)
 
 ### **Question:**
 
-> ***Write a program to get all links from a webpage.***
+> ***Write a program to determine whether a series of integers has an increasing trend or not.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-from bs4 import BeautifulSoup
-from urllib.request import Request, urlopen
 
-req = Request("http://www.myw3schools.com")
-html_page = urlopen(req)
+def myfunc(x):
+    if (sorted(x) == x):
+        return True
+    else:
+        return False
 
-soup = BeautifulSoup(html_page, "lxml")
+print(myfunc([11,12,13,14]))
+print(myfunc([11,12,15,13,14]))
 
-links = []
-for link in soup.findAll('a'):
-    links.append(link.get('href'))
-
-print(links)
 ```
 ----------------------------------------
 
@@ -4230,11 +4217,11 @@ print(" Temperature in Fahrenheit is: ", f)
 <strong>Solution: </strong>
 
 ```python
-number = int(input("Enter an integer: "))
-if(number%5==0):
-    print(number, "is a multile of 5")
+x = int(input("Enter an integer: "))
+if(x%5==0):
+    print(x, "is a multiple of 5")
 else:
-    print(number, "is not a multiple of 5")
+    print(x, "is not a multiple of 5")
 ```
 ----------------------------------------
 
@@ -4249,11 +4236,11 @@ else:
 <strong>Solution: </strong>
 
 ```python
-number = int(input("Enter an integer: "))
-if((number%3==0)and(number%5==0)):
-    print(number, "is a multiple of both 3 and 5")
+x = int(input("Enter an integer: "))
+if((x%3==0)and(x%5==0)):
+    print(x, "is a multiple of both 3 and 5")
 else:
-    print(number, "is not a multiple of both 3 and 5")
+    print(x, "is not a multiple of both 3 and 5")
 ```
 ----------------------------------------
 
@@ -4311,13 +4298,15 @@ for i in range(50,100):
 <strong>Solution: </strong>
 
 ```python
-def print_till_zero(n):
+
+def myfunc(n):
     if (n==0):
         return
     print(n)
     n=n-1
-    print_till_zero(n)
-print_till_zero(9)
+    myfunc(n)
+myfunc(9)
+
 ```
 ----------------------------------------
 
@@ -4345,37 +4334,19 @@ print("The number of odd numbers in the array are: ", count)
 
 ### **Question:**
 
-> ***Write a program to design a calculator.***
+> ***Write a program to reverse a given upper case string in lower case.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-def add(x,y):
-    print(x,"+",y,"=", x+y)
-def subtract(x,y):
-    print(x,"-",y,"=", x-y)
-def multiply(x,y):
-    print(x,"*",y,"=", x*y)
-def divide(x,y):
-    print(x,"/",y,"=", x/y)
-print("Enter a number:")
-n1=input()
-print("Enter a number:")
-n2=input()
-print("Enter the operation +,-,*,/ ") 
-op=input() 
-if op=='+':
-    add(int(n1),int(n2))
-elif op=='-':
-    subtract(int(n1),int(n2))
-elif op=='*':
-    multiply(int(n1),int(n2))
-elif op=='/':
-    divide(int(n1),int(n2))
-else:
-    print("Invalid entry.")
+
+def myfunc(x):
+    return x[::-1].lower()
+x = "JAVASCRIPT"
+print(myfunc(x))
+
 ```
 ----------------------------------------
 
@@ -4383,7 +4354,7 @@ else:
 
 ### **Question:**
 
-> ***Write a program to find the Maximum of two numbers.***
+> ***Write a program to find the maximum of two numbers.***
 
 ---------------------------------------
 
@@ -4427,7 +4398,7 @@ print(a if a >= b else b)
 
 ### **Question:**
 
-> ***Write a program to find the Minimum of two numbers.***
+> ***Write a program to find the minimum of two numbers.***
 
 ---------------------------------------
 
@@ -4452,7 +4423,7 @@ print(minimum(a, b))
 
 ### **Question:**
 
-> ***Write a program to Calculate Profit or Loss.***
+> ***Write a program to calculate Profit or Loss.***
 
 ---------------------------------------
 
@@ -4511,16 +4482,16 @@ else:
 
 ### **Question:**
 
-> ***Write a program to Print Even Numbers from 1 to N.***
+> ***Write a program to print Even numbers from 1 to N.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-max = int(input(" Enter the Value of N : "))
+x = int(input(" Enter the Value of N : "))
 
-for num in range(1, max+1):
+for num in range(1, x+1):
     if(num % 2 == 0):
         print("{0}".format(num))
 ```
@@ -4530,16 +4501,16 @@ for num in range(1, max+1):
 
 ### **Question:**
 
-> ***Write a program to Print Odd Numbers from 1 to N.***
+> ***Write a program to print Odd numbers from 1 to N.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-max = int(input(" Enter the Value of N : "))
+x = int(input(" Enter the Value of N : "))
 
-for num in range(1, max+1):
+for num in range(1, x+1):
     if(num % 2 != 0):
         print("{0}".format(num))
 ```
@@ -4549,22 +4520,22 @@ for num in range(1, max+1):
 
 ### **Question:**
 
-> ***Write a program to Compute Sum of Even Numbers from 1 to N.***
+> ***Write a program to compute sum of Even numbers from 1 to N.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-max = int(input(" Enter the Value of N : "))
+x = int(input(" Enter the Value of N : "))
 total = 0
 
-for num in range(1, max+1):
+for num in range(1, x+1):
     if(num % 2 == 0):
         print("{0}".format(num))
         total = total + num
 
-print("The Sum of Even Numbers from 1 to {0} = {1}".format(num, total))
+print("The Sum of Even Numbers from 1 to {0} is: {1}".format(num, total))
 ```
 ----------------------------------------
 
@@ -4573,22 +4544,22 @@ print("The Sum of Even Numbers from 1 to {0} = {1}".format(num, total))
 
 ### **Question:**
 
-> ***Write a program to Compute Sum of Odd Numbers from 1 to N.***
+> ***Write a program to compute sum of Odd numbers from 1 to N.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-max = int(input(" Enter the Value of N : "))
+x = int(input(" Enter the Value of N : "))
 total = 0
 
-for num in range(1, max+1):
+for num in range(1, x+1):
     if(num % 2 != 0):
         print("{0}".format(num))
         total = total + num
 
-print("The Sum of Odd Numbers from 1 to {0} = {1}".format(num, total))
+print("The Sum of Odd Numbers from 1 to {0} is: {1}".format(num, total))
 ```
 ----------------------------------------
 
