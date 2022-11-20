@@ -3435,7 +3435,7 @@ print("The Average of two lists: ", myfunc(x, y))
 
 ### **Question:**
 
-> ***Write a program to copy the contents of one file into another.***
+> ***Write a program to determine the maximum and minimum value in the three given lists.***
 
 ---------------------------------------
 
@@ -3443,10 +3443,15 @@ print("The Average of two lists: ", myfunc(x, y))
 
 ```python
  
-with open("test.txt") as f:
-    with open("out.txt", "w") as f1:
-        for line in f:
-            f1.write(line)
+
+x = [12,13,15,28,27,32,53]
+y = [54,32,91,0,41,13,19]
+z = [12,11,51,16,15,58,49]
+print("Maximum value in the three given lists is: ")
+print(max(x+y+z))
+print("Minimum value in the three given lists is: ")
+print(min(x+y+z))
+
  
 ```
 ----------------------------------------
@@ -3456,7 +3461,7 @@ with open("test.txt") as f:
 
 ### **Question:**
 
-> ***Write a program to count the occurrences of a letter in a text file.***
+> ***Write a program to delete empty lists from a given list of lists.***
 
 ---------------------------------------
 
@@ -3464,19 +3469,9 @@ with open("test.txt") as f:
 
 ```python
  
-fname = input("Enter file name: ")
-l=input("Enter letter to be searched:")
-k = 0
- 
-with open(fname, 'r') as f:
-    for line in f:
-        words = line.split()
-        for i in words:
-            for letter in i:
-                if(letter==l):
-                    k=k+1
-print("Occurrences of the letter:")
-print(k)
+x = [[], [], [], ['Ball', 'Bag'], [11,12], ['Bat','Book'], []]
+print([i for i in x if i])
+
  
 ```
 ----------------------------------------
