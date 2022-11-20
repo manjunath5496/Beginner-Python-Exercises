@@ -3491,7 +3491,7 @@ print(k)
 
 ### **Question:**
 
-> ***Write a program to read a text file and print all numbers present in the text file.***
+> ***Write a program to determine whether or not every dictionary in a list is empty.***
 
 ---------------------------------------
 
@@ -3499,15 +3499,10 @@ print(k)
 
 ```python
 
-fname = input("Enter file name: ")
- 
-with open(fname, 'r') as f:
-    for line in f:
-        words = line.split()
-        for i in words:
-            for letter in i:
-                if(letter.isdigit()):
-                    print(letter)
+x = [{},{},{}]
+y = [{2:6},{},{}]
+print(all(not i for i in x))
+print(all(not i for i in y))
  
 ```
 ----------------------------------------
