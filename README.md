@@ -3561,7 +3561,7 @@ fout.close()
 
 ### **Question:**
 
-> ***Write a program to count the number of blank spaces in a text file.***
+> ***Write a program to determine whether a list is empty or not.***
 
 ---------------------------------------
 
@@ -3569,18 +3569,12 @@ fout.close()
 
 ```python
 
-fname = input("Enter file name: ")
-k = 0
+x = []
  
-with open(fname, 'r') as f:
-    for line in f:
-        words = line.split()
-        for i in words:
-            for letter in i:
-                if(letter.isspace):
-                    k=k+1
-print("Occurrences of blank spaces:")
-print(k)
+if x:
+    print("List is not empty")
+else:
+    print("List is empty")
  
 ```
 ----------------------------------------
@@ -3598,12 +3592,11 @@ print(k)
 
 ```python
 
-fname = input("Enter file name: ")
+x = input("Enter the file name: ")
  
-with open(fname, 'r') as f:
+with open(x, 'r') as f:
     for line in f:
-        l=line.title()
-        print(l)
+        print(line.title())
 
  
 ```
@@ -3622,8 +3615,8 @@ with open(fname, 'r') as f:
 
 ```python
 
-filename=input("Enter file name: ")
-for line in reversed(list(open(filename))):
+x=input("Enter the file name: ")
+for line in reversed(list(open(x))):
     print(line.rstrip())
 
  
