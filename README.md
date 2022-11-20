@@ -4017,7 +4017,7 @@ print(no_punct)
 
 ### **Question:**
 
-> ***Write a program to find the hash of a file and display it.***
+> ***Put "xyz" at the end of the specified string (length should be at least 3). If the provided string already ends with "xyz," add "123" to it. If the specified string's length is less than three, leave it unaltered.***
 
 ---------------------------------------
 
@@ -4025,30 +4025,21 @@ print(no_punct)
 
 ```python
 
-import hashlib
+def myfunc(x):
+  i = len(x)
 
-def hash_file(filename):
-   """"This function returns the SHA-1 hash
-   of the file passed into it"""
+  if i > 2:
+    if x[-3:] == 'xyz':
+      x += '123'
+    else:
+      x += 'xyz'
 
-   # make a hash object
-   h = hashlib.sha1()
+  return x
 
-   # open file for reading in binary mode
-   with open(filename,'rb') as file:
+print(myfunc('xy'))
+print(myfunc('xyz'))
+print(myfunc('morning'))
 
-       # loop till the end of the file
-       chunk = 0
-       while chunk != b'':
-           # read only 1024 bytes at a time
-           chunk = file.read(1024)
-           h.update(chunk)
-
-   # return the hex representation of digest
-   return h.hexdigest()
-
-message = hash_file("languages.txt")
-print(message)
  
 ```
 ----------------------------------------
