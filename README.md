@@ -3327,22 +3327,20 @@ print(myfunc([11, 22, -28, 3]))
 
 ### **Question:**
 
-> ***Write a program to read the contents of a file.***
+> ***Write a program to determine whether every string in a list is equal to a given string..***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
- 
-a=str(input("Enter the name of the file with .txt extension:"))
-file2=open(a,'r')
-line=file2.readline()
-while(line!=""):
-    print(line)
-    line=file2.readline()
-file2.close()
- 
+
+x = ["ball", "bat", "bag", "book"]
+y = ["book", "book", "book", "book"]
+
+print(all(i == 'bag' for i in x))
+print(all(i == 'book' for i in y)) 
+
 ```
 ----------------------------------------
 
@@ -3536,7 +3534,7 @@ with open(fname, 'r') as f:
 
 ### **Question:**
 
-> ***Write a program to append the contents of one file to another file.***
+> ***Write a program that takes two lists and returns True when at least one of the elements in the lists is shared by both.***
 
 ---------------------------------------
 
@@ -3544,14 +3542,15 @@ with open(fname, 'r') as f:
 
 ```python
 
-name1 = input("Enter file to be read from: ")
-name2 = input("Enter file to be appended to: ")
-fin = open(name1, "r")
-data2 = fin.read()
-fin.close()
-fout = open(name2, "a")
-fout.write(data2)
-fout.close()
+def myfunc(A, B):
+     result = False
+     for x in A:
+         for y in B:
+             if x == y:
+                 result = True
+                 return result
+print(myfunc([21,22,23,24,25], [25,26,27,28,29]))
+print(myfunc([31,32,33,34,35], [36,37,38,39]))
  
 ```
 ----------------------------------------
