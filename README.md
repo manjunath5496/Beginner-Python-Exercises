@@ -4530,7 +4530,7 @@ str = input("Enter a String : ")
 
 string = str.upper()
  
-print("\nString in Lowercase  =  ", str)
+print("String in Lowercase  =  ", str)
 print("String in Uppercase =  ", string)
 ```
 ----------------------------------------
@@ -4550,7 +4550,7 @@ str = input("Enter a String : ")
 
 string = str.lower()
 
-print("\nString in Uppercase  =  ", str)
+print("String in Uppercase  =  ", str)
 print("String in Lowercase =  ", string)
 ```
 ----------------------------------------
