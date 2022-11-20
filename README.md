@@ -2829,19 +2829,18 @@ print(myfunc('8', '8'))
 
 ### **Question:**
 
-> ***Write a program to add a key-value pair to a dictionary.***
+> ***Write a program to add leading zeros to a string.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-key=int(input("Enter the key (int) to be added:"))
-value=int(input("Enter the value for the key to be added:"))
-d={}
-d.update({key:value})
-print("Updated dictionary is:")
-print(d)
+x='122.22'
+x = x.ljust(8, '0')
+print(x)
+x = x.ljust(10, '0')
+print(x)
  
 ```
 ----------------------------------------
@@ -2850,18 +2849,16 @@ print(d)
 
 ### **Question:**
 
-> ***Write a program to concatenate two dictionaries into one dictionary.***
+> ***Write a program that displays strings with double quotes.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-d1={'A':1,'B':2}
-d2={'C':3}
-d1.update(d2)
-print("Concatenated dictionary is:")
-print(d1)
+
+import json
+print(json.dumps({'Albert': 1, 'Alan': 2, 'Alex': 3}))
  
 ```
 ----------------------------------------
@@ -2877,6 +2874,7 @@ print(d1)
 <strong>Solution: </strong>
 
 ```python
+
 d={'A':1,'B':2,'C':3}
 key=input("Enter key to check:")
 if key in d.keys():
@@ -2885,7 +2883,6 @@ if key in d.keys():
 else:
       print("Key isn't present!")
 
- 
 ```
 ----------------------------------------
 
@@ -2900,8 +2897,9 @@ else:
 <strong>Solution: </strong>
 
 ```python
+
 d={'A':100,'B':540,'C':239}
-print("Total sum of values in the dictionary:")
+print("Total sum of values in the dictionary is: ")
 print(sum(d.values()))
  
  
@@ -2922,10 +2920,10 @@ print(sum(d.values()))
 ```python
  
 d={'A':10,'B':10,'C':239}
-tot=1
+x=1
 for i in d:    
-    tot=tot*d[i]
-print(tot)
+    x=x*d[i]
+print(x)
  
 ```
 ----------------------------------------
@@ -2961,7 +2959,7 @@ print(d)
 
 ### **Question:**
 
-> ***Write a program to form a dictionary from an object of a class.***
+> ***Write a program to list the home directory without using an absolute path.***
 
 ---------------------------------------
 
@@ -2969,12 +2967,8 @@ print(d)
 
 ```python
  
-class A(object):  
-     def __init__(self):  
-         self.A=1  
-         self.B=2  
-obj=A()  
-print(obj.__dict__)
+import os.path
+print(os.path.expanduser('~'))
  
 ```
 ----------------------------------------
@@ -2984,7 +2978,7 @@ print(obj.__dict__)
 
 ### **Question:**
 
-> ***Write a program to map two lists into a dictionary.***
+> ***Write a program to input two integers in a single line.***
 
 ---------------------------------------
 
@@ -2992,20 +2986,9 @@ print(obj.__dict__)
 
 ```python
 
-keys=[]
-values=[]
-n=int(input("Enter number of elements for dictionary:"))
-print("For keys:")
-for x in range(0,n):
-    element=int(input("Enter element" + str(x+1) + ":"))
-    keys.append(element)
-print("For values:")
-for x in range(0,n):
-    element=int(input("Enter element" + str(x+1) + ":"))
-    values.append(element)
-d=dict(zip(keys,values))
-print("The dictionary is:")
-print(d)
+print("Enter the value of a and b: ")
+a, b = map(int, input().split())
+print("The value of a and b are: ", a, b)
  
 ```
 ----------------------------------------
@@ -3015,7 +2998,7 @@ print(d)
 
 ### **Question:**
 
-> ***Write a program to count the frequency of words appearing in a string using a dictionary.***
+> ***Write a program to convert true to 1 and false to 0.***
 
 ---------------------------------------
 
@@ -3023,11 +3006,13 @@ print(d)
 
 ```python
  
-test_string=input("Enter string:")
-l=[]
-l=test_string.split()
-wordfreq=[l.count(p) for p in l]
-print(dict(zip(l,wordfreq)))
+a = 'true'
+a = int(a == 'true')
+print(a)
+a = 'xyz'
+a = int(a == 'true')
+print(a)
+
  
 ```
 ----------------------------------------
@@ -3037,7 +3022,7 @@ print(dict(zip(l,wordfreq)))
 
 ### **Question:**
 
-> ***Write a program to create a dictionary with key as first character and value as words starting with that character.***
+> ***Write a program to determine whether a variable is an integer or a string.***
 
 ---------------------------------------
 
@@ -3045,18 +3030,8 @@ print(dict(zip(l,wordfreq)))
 
 ```python
  
-test_string=input("Enter string:")
-l=test_string.split()
-d={}
-for word in l:
-    if(word[0] not in d.keys()):
-        d[word[0]]=[]
-        d[word[0]].append(word)
-    else:
-        if(word not in d[word[0]]):
-          d[word[0]].append(word)
-for k,v in d.items():
-        print(k,":",v)
+print(isinstance(16,int) or isinstance(16,str))
+print(isinstance("16",int) or isinstance("16",str))
  
 ```
 ----------------------------------------
@@ -3066,7 +3041,7 @@ for k,v in d.items():
 
 ### **Question:**
 
-> ***Write a program to count the number of vowels present in a string using sets.***
+> ***Write a program to count the number of vowels present in a string entered by the user using sets.***
 
 ---------------------------------------
 
@@ -3074,13 +3049,13 @@ for k,v in d.items():
 
 ```python
  
-s=input("Enter string:")
+s=input("Enter a string: ")
 count = 0
 vowels = set("aeiou")
 for letter in s:
     if letter in vowels:
         count += 1
-print("Count of the vowels is:")
+print("The number of vowels present in a string is: ")
 print(count)
  
 ```
@@ -3099,13 +3074,13 @@ print(count)
 
 ```python
 
-s1=input("Enter first string:")
-s2=input("Enter second string:")
-a=list(set(s1)&set(s2))
-print("The common letters are:")
-for i in a:
+x=input("Enter the first string: ")
+y=input("Enter the second string: ")
+z=list(set(x)&set(y))
+print("The common letters are: ")
+for i in z:
     print(i)
- 
+    
 ```
 ----------------------------------------
 
@@ -3122,13 +3097,13 @@ for i in a:
 
 ```python
 
-s1=input("Enter first string:")
-s2=input("Enter second string:")
-a=list(set(s1)-set(s2))
-print("The letters are:")
-for i in a:
+x=input("Enter the first string: ")
+y=input("Enter the second string: ")
+z=list(set(x)-set(y))
+print("The letters in the first string but not in the second string are: ")
+for i in z:
     print(i)
- 
+    
 ```
 ----------------------------------------
 
