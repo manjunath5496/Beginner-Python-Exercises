@@ -3112,7 +3112,7 @@ for i in z:
 
 ### **Question:**
 
-> ***Write a program to display which letters is present in both the strings.***
+> ***Write a program to determine whether a variable is a list, tuple, or set.***
 
 ---------------------------------------
 
@@ -3120,12 +3120,15 @@ for i in z:
 
 ```python
 
-s1=input("Enter first string:")
-s2=input("Enter second string:")
-a=list(set(s1)|set(s2))
-print("The letters are:")
-for i in a:
-    print(i)
+i = ['list', True, 8.9, 6]
+if type(i) is list:
+    print('i is a list')
+elif type(i) is set:
+    print('i is a set')
+elif type(i) is tuple:
+    print('i is a tuple')    
+else:
+    print('Neither a set, list, or tuple.')
  
 ```
 ----------------------------------------
@@ -3143,12 +3146,12 @@ for i in a:
 
 ```python
 
-def check(n):
+def myfunc(n):
     if (n < 2):
         return (n % 2 == 0)
-    return (check(n - 2))
-n=int(input("Enter number:"))
-if(check(n)==True):
+    return (myfunc(n - 2))
+n=int(input("Enter a number: "))
+if(myfunc(n)==True):
       print("Number is even!")
 else:
       print("Number is odd!")
