@@ -4101,7 +4101,7 @@ jpeg_res("img1.jpg")
 
 ### **Question:**
 
-> ***Three positive numbers are present in a Python list. Write a program to determine whether the sum of the digits in each number is equal or not. If true, return true; otherwise, return false.***
+> ***Three positive numbers are present in a list. Write a program to determine whether the sum of the digits in each number is equal or not. If true, return true; otherwise, return false.***
 
 ---------------------------------------
 
