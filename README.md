@@ -3302,23 +3302,21 @@ print(myfunc(x))
 
 ### **Question:**
 
-> ***Write a program to find the GCD of two numbers using recursion.***
+> ***Write a program to get the smallest number from a list.***
 
 ---------------------------------------
 
 <strong>Solution: </strong>
 
 ```python
-def gcd(a,b):
-    if(b==0):
-        return a
-    else:
-        return gcd(b,a%b)
-a=int(input("Enter first number:"))
-b=int(input("Enter second number:"))
-GCD=gcd(a,b)
-print("GCD is: ")
-print(GCD)
+
+def myfunc(list):
+    x = list[0]
+    for i in list:
+        if i < x:
+            x = i
+    return x
+print(myfunc([11, 22, -28, 3]))
  
  
 ```
