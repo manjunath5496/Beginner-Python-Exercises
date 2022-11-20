@@ -1190,7 +1190,7 @@ for i in range(x,y+1):
 
 ```python
  
-n=int(input("Enter an integer:"))
+n=int(input("Enter an integer: "))
 a=[]
 for i in range(2,n+1):
     if(n%i==0):
