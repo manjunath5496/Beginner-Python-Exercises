@@ -4659,5 +4659,24 @@ print(a)
 ----------------------------------------
 
 
+# Question 212
 
+### **Question:**
+
+> ***Write a program to convert a given list of strings and characters to a single list of characters.***
+
+---------------------------------------
+
+<strong>Solution: </strong>
+
+```python
+def myfunc(x):
+    result = [i for y in x for i in y]
+    return result
+
+x = ["alan", "john", "w", "p", "james", "q"]
+print(myfunc(x))
+
+```
+----------------------------------------
 
